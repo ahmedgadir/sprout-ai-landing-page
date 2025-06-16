@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Search, FileText, BarChart3, PenTool, CheckCircle, Menu, Save, Send, Lightbulb, Clock, Target } from 'lucide-react';
@@ -713,10 +714,10 @@ const AppShowcase = () => {
             Watch How Easy Grant Success Can Be
           </h2>
           <div className="space-y-2">
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto whitespace-nowrap overflow-hidden">
               From discovery to reporting — our comprehensive platform handles every step of your grant journey
             </p>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto whitespace-nowrap overflow-hidden">
               From discovery to reporting — FundSprout's comprehensive platform handles every step of your grant journey
             </p>
           </div>
