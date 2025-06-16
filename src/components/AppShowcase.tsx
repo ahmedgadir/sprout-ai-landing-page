@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Search, FileText, BarChart3, PenTool, CheckCircle, Menu, Save, Send, Lightbulb, Clock, Target } from 'lucide-react';
@@ -780,17 +781,28 @@ const AppShowcase = () => {
           </div>
         </div>
 
-        <div className="text-center mt-20 p-8 bg-white rounded-2xl shadow-lg border border-brand-light-green/30">
-          <h3 className="text-2xl font-bold text-brand-dark-green mb-4">
-            Ready to transform your grant process?
-          </h3>
-          <p className="text-gray-600 mb-6">
-            Join 20+ nonprofits already using FundSprout to find and win more grants
-          </p>
-          <Button className="bg-brand-primary-green hover:bg-brand-dark-green text-white font-semibold px-8 py-3 text-lg group">
-            Get Early Access
-            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-          </Button>
+        {/* Customer Testimonial */}
+        <div className="mt-20 max-w-4xl mx-auto">
+          <div className="bg-white rounded-2xl shadow-lg border border-brand-light-green/30 p-12 text-center">
+            <div className="mb-8">
+              <blockquote className="text-2xl lg:text-3xl text-gray-800 leading-relaxed font-medium mb-8">
+                "We've used FundSprout for far more than just grants. From grant reporting to program management, partnership coordination, and strategic planning—it's transformed our ability to quickly adapt and scale our impact across different communities."
+              </blockquote>
+              <p className="text-xl text-gray-600 mb-4">
+                For our largest application, a 75+ page federal grant, I'm not sure how we would have completed it without FundSprout's help. 
+                <span className="text-gray-800 font-semibold"> Our recent phase two application was accepted, and we're moving forward to the next stage!</span>
+              </p>
+            </div>
+            <div className="flex items-center justify-center gap-4">
+              <div className="w-16 h-16 bg-gradient-to-br from-brand-primary-green to-brand-dark-green rounded-full flex items-center justify-center text-white font-bold text-xl">
+                AA
+              </div>
+              <div className="text-left">
+                <div className="font-semibold text-gray-900 text-lg">Ahmed Ali</div>
+                <div className="text-gray-600">CEO, Injaz Toronto</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
