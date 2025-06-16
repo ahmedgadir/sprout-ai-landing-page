@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Search, FileText, BarChart3, PenTool, CheckCircle } from 'lucide-react';
+import { ArrowRight, Search, FileText, BarChart3, PenTool, CheckCircle, Menu, Save, Send, Lightbulb, Clock, Target } from 'lucide-react';
 
 const AppShowcase = () => {
   const [activeStep, setActiveStep] = useState(0);
@@ -388,84 +388,224 @@ const AppShowcase = () => {
       icon: PenTool,
       highlight: "570/800 words • AI Suggestions",
       mockupContent: (
-        <div className="p-6 h-full bg-gray-50">
-          {/* AI Writing Alert at Top */}
-          <div className="mb-6">
-            <div className="bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 rounded-xl p-6">
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
-                    <span className="text-white text-sm">✨</span>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-800">AI Writing Assistant</h3>
-                    <p className="text-sm text-gray-600">Analyzing your organization data to craft compelling content</p>
-                  </div>
+        <div className="h-full bg-gray-50 flex">
+          {/* Left Sidebar */}
+          <div className="w-80 bg-white border-r border-gray-200 flex flex-col">
+            <div className="p-6 border-b border-gray-100">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                  <span className="text-white font-semibold text-sm">EE</span>
                 </div>
-                <div className="flex items-center gap-2 bg-green-50 px-3 py-1 rounded-full">
-                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                  <span className="text-sm text-green-700 font-medium">Writing...</span>
+                <div>
+                  <h3 className="font-semibold text-gray-800">Environmental Education</h3>
+                  <p className="text-sm text-gray-500">Grant Application</p>
                 </div>
               </div>
               
-              <div className="bg-white rounded-lg p-4 mb-4">
-                <div className="text-sm text-gray-800 leading-relaxed">
-                  <p className="mb-3">
-                    Our evidence-based approach combines classroom instruction with outdoor learning experiences, creating measurable improvements in environmental literacy and stewardship behaviors. Recent assessments show that 
-                    <span className="bg-blue-100 text-blue-800 px-1 rounded animate-pulse ml-1">participating students demonstrate an 85% improvement in environmental knowledge scores</span>
-                    <span className="ml-1 w-2 h-5 bg-blue-400 animate-pulse inline-block"></span>
-                  </p>
+              {/* AI Writing Status */}
+              <div className="bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 rounded-lg p-4">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-6 h-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
+                    <span className="text-white text-xs">✨</span>
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2">
+                      <span className="font-medium text-gray-800 text-sm">AI Writing Assistant</span>
+                      <div className="flex items-center gap-1 bg-green-50 px-2 py-1 rounded-full">
+                        <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                        <span className="text-xs text-green-700 font-medium">Active</span>
+                      </div>
+                    </div>
+                    <p className="text-xs text-gray-600">Generating project summary...</p>
+                  </div>
+                </div>
+                
+                <div className="space-y-2">
+                  <div className="flex justify-between text-xs">
+                    <span className="text-gray-600">Progress</span>
+                    <span className="text-blue-600 font-medium">1,247 / 1,500 words</span>
+                  </div>
+                  <div className="w-full bg-gray-200 rounded-full h-2">
+                    <div className="bg-blue-500 h-2 rounded-full animate-pulse" style={{width: '83%'}}></div>
+                  </div>
                 </div>
               </div>
+            </div>
+            
+            {/* Application Sections */}
+            <div className="flex-1 p-6 space-y-3">
+              <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Application Sections</div>
               
-              <div className="flex items-center justify-between">
-                <div className="flex gap-3">
-                  <button className="bg-green-500 text-white px-4 py-2 rounded-lg text-sm hover:bg-green-600 transition-colors">
-                    ✓ Accept
-                  </button>
-                  <button className="bg-gray-100 text-gray-700 px-4 py-2 rounded-lg text-sm hover:bg-gray-200 transition-colors">
-                    Edit
-                  </button>
-                  <button className="bg-red-100 text-red-700 px-4 py-2 rounded-lg text-sm hover:bg-red-200 transition-colors">
-                    ✕ Reject
-                  </button>
+              <div className="space-y-2">
+                <div className="flex items-center gap-3 p-3 bg-green-50 text-green-700 rounded-lg border border-green-200">
+                  <CheckCircle className="w-4 h-4" />
+                  <span className="text-sm font-medium">Organization Overview</span>
+                  <span className="ml-auto text-xs">Complete</span>
                 </div>
-                <div className="text-sm text-gray-500">570 / 800 words</div>
+                
+                <div className="flex items-center gap-3 p-3 bg-blue-50 text-blue-700 rounded-lg border border-blue-200">
+                  <div className="w-4 h-4 border-2 border-blue-500 rounded-full animate-pulse"></div>
+                  <span className="text-sm font-medium">Project Summary</span>
+                  <span className="ml-auto text-xs">Writing...</span>
+                </div>
+                
+                <div className="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-lg">
+                  <div className="w-4 h-4 border-2 border-gray-300 rounded-full"></div>
+                  <span className="text-sm text-gray-600">Goals & Objectives</span>
+                  <Clock className="w-3 h-3 text-gray-400 ml-auto" />
+                </div>
+                
+                <div className="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-lg">
+                  <div className="w-4 h-4 border-2 border-gray-300 rounded-full"></div>
+                  <span className="text-sm text-gray-600">Implementation Plan</span>
+                  <Clock className="w-3 h-3 text-gray-400 ml-auto" />
+                </div>
+                
+                <div className="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-lg">
+                  <div className="w-4 h-4 border-2 border-gray-300 rounded-full"></div>
+                  <span className="text-sm text-gray-600">Budget & Justification</span>
+                  <Clock className="w-3 h-3 text-gray-400 ml-auto" />
+                </div>
+                
+                <div className="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-lg">
+                  <div className="w-4 h-4 border-2 border-gray-300 rounded-full"></div>
+                  <span className="text-sm text-gray-600">Evaluation Plan</span>
+                  <Clock className="w-3 h-3 text-gray-400 ml-auto" />
+                </div>
               </div>
             </div>
           </div>
           
-          {/* Main Editor Area */}
-          <div className="bg-white rounded-xl shadow-sm border border-gray-200 h-full">
-            <div className="flex items-center justify-between p-6 border-b border-gray-100">
-              <div className="flex items-center gap-4">
-                <h2 className="text-xl font-semibold text-gray-900">Environmental Education Initiative</h2>
-                <span className="text-gray-400">•</span>
-                <span className="text-gray-600">Project Summary</span>
-              </div>
-              <div className="flex gap-2">
-                <button className="bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-lg text-sm font-medium transition-colors">
-                  Save Draft
-                </button>
-                <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
-                  Review
-                </button>
+          {/* Main Editor */}
+          <div className="flex-1 flex flex-col">
+            {/* Top Navigation */}
+            <div className="bg-white border-b border-gray-200 p-4">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-4">
+                  <h2 className="text-lg font-semibold text-gray-900">Project Summary</h2>
+                  <div className="flex items-center gap-2 text-sm text-gray-500">
+                    <span>•</span>
+                    <span>Environmental Education Initiative Grant</span>
+                  </div>
+                </div>
+                <div className="flex gap-2">
+                  <button className="flex items-center gap-2 px-3 py-2 text-gray-600 hover:bg-gray-100 rounded-lg text-sm">
+                    <Save className="w-4 h-4" />
+                    Save Draft
+                  </button>
+                  <button className="flex items-center gap-2 px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-sm">
+                    <Send className="w-4 h-4" />
+                    Submit Section
+                  </button>
+                </div>
               </div>
             </div>
             
-            <div className="p-6">
-              <div className="prose prose-lg max-w-none">
-                <p className="text-gray-800 leading-relaxed mb-4">
-                  Our organization is dedicated to fostering environmental awareness and education within underserved communities. Through innovative programming and community partnerships, we have successfully reached over 2,000 students and families in the past three years, creating lasting impact through hands-on learning experiences that connect classroom theory with real-world environmental challenges.
-                </p>
-                
-                <p className="text-gray-800 leading-relaxed mb-4">
-                  The proposed Environmental Education Initiative represents a strategic expansion of our proven curriculum, designed to reach an additional 500 students annually across five elementary schools in low-income neighborhoods.
-                </p>
-                
-                <p className="text-gray-800 leading-relaxed">
-                  Research demonstrates that environmental education programs implemented in elementary settings show the highest retention rates and behavioral change outcomes. Our curriculum integrates STEM learning objectives with environmental science concepts, ensuring alignment with state educational standards while fostering critical thinking skills essential for the next generation of environmental stewards.
-                </p>
+            {/* Writing Area */}
+            <div className="flex-1 flex">
+              <div className="flex-1 p-8 bg-white">
+                <div className="max-w-4xl mx-auto">
+                  <div className="prose prose-lg max-w-none">
+                    <div className="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                      <div className="flex items-center gap-2 mb-2">
+                        <Lightbulb className="w-4 h-4 text-blue-600" />
+                        <span className="text-sm font-medium text-blue-800">AI is writing your project summary...</span>
+                      </div>
+                      <p className="text-sm text-blue-700">Based on your organization profile and grant requirements</p>
+                    </div>
+                    
+                    <h3 className="text-xl font-bold text-gray-900 mb-4">Project Summary</h3>
+                    
+                    <p className="text-gray-800 leading-relaxed mb-4">
+                      Our organization is dedicated to fostering environmental awareness and education within underserved communities. Through innovative programming and community partnerships, we have successfully reached over 2,000 students and families in the past three years, creating lasting impact through hands-on learning experiences that connect classroom theory with real-world environmental challenges.
+                    </p>
+                    
+                    <p className="text-gray-800 leading-relaxed mb-4">
+                      The proposed Environmental Education Initiative represents a strategic expansion of our proven curriculum, designed to reach an additional 500 students annually across five elementary schools in low-income neighborhoods. Our evidence-based approach combines classroom instruction with outdoor learning experiences, creating measurable improvements in environmental literacy and stewardship behaviors.
+                    </p>
+                    
+                    <div className="bg-yellow-100 border-l-4 border-yellow-500 p-4 mb-4">
+                      <p className="text-gray-800 leading-relaxed">
+                        Recent assessments demonstrate that participating students show 
+                        <span className="bg-blue-200 text-blue-800 px-1 rounded animate-pulse ml-1">an 85% improvement in environmental knowledge scores and a 73% increase in pro-environmental behaviors at home</span>
+                        <span className="ml-1 w-2 h-5 bg-blue-500 animate-pulse inline-block align-middle"></span>
+                      </p>
+                    </div>
+                    
+                    <p className="text-gray-800 leading-relaxed mb-4">
+                      This initiative will directly address the critical gap in environmental education access, particularly impacting communities where children have limited exposure to environmental science concepts. Through partnerships with local environmental organizations and hands-on learning activities, we will create sustainable change that extends beyond the classroom into families and communities.
+                    </p>
+                    
+                    <div className="bg-gray-100 border-l-4 border-gray-400 p-4 mb-4">
+                      <p className="text-gray-600 leading-relaxed italic">
+                        [AI continuing to write based on grant requirements and organizational data...]
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Right Sidebar */}
+              <div className="w-80 bg-gray-50 border-l border-gray-200 p-6">
+                <div className="space-y-6">
+                  <div className="bg-white rounded-lg p-4 border border-gray-200">
+                    <h4 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
+                      <Target className="w-4 h-4" />
+                      Grant Requirements
+                    </h4>
+                    <div className="space-y-2 text-sm">
+                      <div className="flex items-center gap-2">
+                        <CheckCircle className="w-4 h-4 text-green-500" />
+                        <span className="text-gray-700">Community impact focus</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <CheckCircle className="w-4 h-4 text-green-500" />
+                        <span className="text-gray-700">Measurable outcomes</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className="w-4 h-4 border-2 border-orange-400 rounded-full animate-pulse"></div>
+                        <span className="text-gray-700">Sustainability plan</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className="w-4 h-4 border-2 border-gray-300 rounded-full"></div>
+                        <span className="text-gray-500">Partnership details</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-white rounded-lg p-4 border border-gray-200">
+                    <h4 className="font-semibold text-gray-800 mb-3">Writing Progress</h4>
+                    <div className="space-y-3">
+                      <div>
+                        <div className="flex justify-between text-sm mb-1">
+                          <span className="text-gray-600">Word Count</span>
+                          <span className="font-semibold text-blue-600">1,247 / 1,500</span>
+                        </div>
+                        <div className="w-full bg-gray-200 rounded-full h-2">
+                          <div className="bg-blue-500 h-2 rounded-full animate-pulse" style={{width: '83%'}}></div>
+                        </div>
+                      </div>
+                      <div>
+                        <div className="flex justify-between text-sm mb-1">
+                          <span className="text-gray-600">Requirements Met</span>
+                          <span className="font-semibold text-green-600">6 / 8</span>
+                        </div>
+                        <div className="w-full bg-gray-200 rounded-full h-2">
+                          <div className="bg-green-500 h-2 rounded-full" style={{width: '75%'}}></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                    <h4 className="font-semibold text-green-800 mb-2">AI Suggestions</h4>
+                    <div className="space-y-2 text-sm">
+                      <p className="text-green-700">• Add specific timeline for implementation</p>
+                      <p className="text-green-700">• Include partnership organization names</p>
+                      <p className="text-green-700">• Mention evaluation methodology</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
