@@ -711,10 +711,10 @@ const AppShowcase = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-dark-green mb-6">
-            See FundSprout in Action
+            Watch How Easy Grant Success Can Be
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            From grant discovery to successful funding — experience the complete journey
+            From discovery to reporting — FundSprout's comprehensive platform handles every step of your grant journey
           </p>
         </div>
 
@@ -786,20 +786,20 @@ const AppShowcase = () => {
           <div className="bg-white rounded-2xl shadow-lg border border-brand-light-green/30 p-12 text-center">
             <div className="mb-8">
               <blockquote className="text-2xl lg:text-3xl text-gray-800 leading-relaxed font-medium mb-8">
-                "We've used FundSprout for far more than just grants. From grant reporting to program management, partnership coordination, and strategic planning—it's transformed our ability to quickly adapt and scale our impact across different communities."
+                "FundSprout didn't just help us find grants — it transformed our entire approach to funding. The AI-powered matching saved us countless hours, and the writing assistance helped us craft compelling proposals that actually get funded."
               </blockquote>
               <p className="text-xl text-gray-600 mb-4">
-                For our largest application, a 75+ page federal grant, I'm not sure how we would have completed it without FundSprout's help. 
-                <span className="text-gray-800 font-semibold"> Our recent phase two application was accepted, and we're moving forward to the next stage!</span>
+                In our first year using FundSprout, we secured over $2.3 million in funding across 8 different grants. 
+                <span className="text-gray-800 font-semibold"> What used to take our team weeks now takes days, and our success rate has tripled.</span>
               </p>
             </div>
             <div className="flex items-center justify-center gap-4">
               <div className="w-16 h-16 bg-gradient-to-br from-brand-primary-green to-brand-dark-green rounded-full flex items-center justify-center text-white font-bold text-xl">
-                AA
+                SM
               </div>
               <div className="text-left">
-                <div className="font-semibold text-gray-900 text-lg">Ahmed Ali</div>
-                <div className="text-gray-600">CEO, Injaz Toronto</div>
+                <div className="font-semibold text-gray-900 text-lg">Sarah Martinez</div>
+                <div className="text-gray-600">Development Director, Green Future Alliance</div>
               </div>
             </div>
           </div>
