@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import { Search, FileText, BarChart3, PenTool, CheckCircle } from 'lucide-react';
 import AIWritingAnimation from './AIWritingAnimation';
@@ -67,90 +66,43 @@ const StickyScrollFeatures = () => {
           <div className="space-y-4">
             <div className="bg-gray-50 p-4 rounded-lg">
               <h4 className="font-semibold text-gray-700 mb-3">Why This Grant Fits</h4>
-              <div className="space-y-3">
+              <div className="space-y-2">
                 <div className="flex items-start gap-2">
-                  <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-green-500 rounded-full mt-1"></div>
                   <div>
                     <p className="text-sm font-medium text-gray-800">Environmental Focus Alignment</p>
-                    <p className="text-xs text-gray-600">Your environmental education programs directly match this funder's core priorities and mission statement</p>
+                    <p className="text-xs text-gray-600">Your programs directly match funder priorities</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-2">
-                  <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-green-500 rounded-full mt-1"></div>
                   <div>
                     <p className="text-sm font-medium text-gray-800">Community Impact Track Record</p>
-                    <p className="text-xs text-gray-600">Your organization's proven history of reaching 2,000+ community members demonstrates scalable impact</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-2">
-                  <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
-                  <div>
-                    <p className="text-sm font-medium text-gray-800">Geographic Overlap</p>
-                    <p className="text-xs text-gray-600">Your service area aligns perfectly with their target funding regions</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-2">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
-                  <div>
-                    <p className="text-sm font-medium text-gray-800">Budget Range Match</p>
-                    <p className="text-xs text-gray-600">Your project scope fits within their $50K-$150K funding range</p>
+                    <p className="text-xs text-gray-600">Proven history of successful outreach</p>
                   </div>
                 </div>
               </div>
             </div>
             
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-gray-50 p-3 rounded-lg">
-                <h4 className="font-semibold text-gray-700 mb-2 text-sm">Compatibility Score</h4>
-                <div className="space-y-2">
-                  <div>
-                    <div className="flex justify-between text-xs mb-1">
-                      <span>Mission Alignment</span>
-                      <span className="font-semibold text-green-600">95%</span>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-1.5">
-                      <div className="bg-green-500 h-1.5 rounded-full" style={{width: '95%'}}></div>
-                    </div>
+            <div className="bg-gray-50 p-4 rounded-lg">
+              <h4 className="font-semibold text-gray-700 mb-3">Compatibility Score</h4>
+              <div className="space-y-3">
+                <div>
+                  <div className="flex justify-between text-sm mb-1">
+                    <span>Mission Alignment</span>
+                    <span className="font-semibold text-green-600">95%</span>
                   </div>
-                  <div>
-                    <div className="flex justify-between text-xs mb-1">
-                      <span>Program Fit</span>
-                      <span className="font-semibold text-green-600">90%</span>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-1.5">
-                      <div className="bg-green-500 h-1.5 rounded-full" style={{width: '90%'}}></div>
-                    </div>
-                  </div>
-                  <div>
-                    <div className="flex justify-between text-xs mb-1">
-                      <span>Geographic</span>
-                      <span className="font-semibold text-blue-600">88%</span>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-1.5">
-                      <div className="bg-blue-500 h-1.5 rounded-full" style={{width: '88%'}}></div>
-                    </div>
+                  <div className="w-full bg-gray-200 rounded-full h-2">
+                    <div className="bg-green-500 h-2 rounded-full" style={{width: '95%'}}></div>
                   </div>
                 </div>
-              </div>
-              
-              <div className="bg-gray-50 p-3 rounded-lg">
-                <h4 className="font-semibold text-gray-700 mb-2 text-sm">Key Requirements</h4>
-                <div className="space-y-1">
-                  <div className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
-                    <span className="text-xs text-gray-700">501(c)(3) Status ✓</span>
+                <div>
+                  <div className="flex justify-between text-sm mb-1">
+                    <span>Program Fit</span>
+                    <span className="font-semibold text-green-600">90%</span>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
-                    <span className="text-xs text-gray-700">3+ Years Operating ✓</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
-                    <span className="text-xs text-gray-700">Environmental Focus ✓</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 bg-yellow-500 rounded-full"></div>
-                    <span className="text-xs text-gray-700">Board Diversity (~)</span>
+                  <div className="w-full bg-gray-200 rounded-full h-2">
+                    <div className="bg-green-500 h-2 rounded-full" style={{width: '90%'}}></div>
                   </div>
                 </div>
               </div>
@@ -308,7 +260,7 @@ const StickyScrollFeatures = () => {
             Everything You Need to Win Grants
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            From discovery to reporting — our platform handles every step of your grant journey
+            From discovery to reporting — our comprehensive platform handles every step of your grant journey
           </p>
         </div>
 
