@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Search, FileText, BarChart3, PenTool, CheckCircle, Menu, Save, Send, Lightbulb, Clock, Target } from 'lucide-react';
@@ -800,30 +799,6 @@ const AppShowcase = () => {
           
           <div className="absolute -top-4 -right-4 bg-brand-orange-accent text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
             {activeStep + 1} / {steps.length}
-          </div>
-        </div>
-
-        {/* Customer Testimonial */}
-        <div className="mt-20 max-w-4xl mx-auto">
-          <div className="bg-white rounded-2xl shadow-lg border border-brand-light-green/30 p-12 text-center">
-            <div className="mb-8">
-              <blockquote className="text-2xl lg:text-3xl text-gray-800 leading-relaxed font-medium mb-8">
-                "FundSprout didn't just help us find grants — it transformed our entire approach to funding. The AI-powered matching saved us countless hours, and the writing assistance helped us craft compelling proposals that actually get funded."
-              </blockquote>
-              <p className="text-xl text-gray-600 mb-4">
-                In our first year using FundSprout, we secured over $2.3 million in funding across 8 different grants. 
-                <span className="text-gray-800 font-semibold"> What used to take our team weeks now takes days, and our success rate has tripled.</span>
-              </p>
-            </div>
-            <div className="flex items-center justify-center gap-4">
-              <div className="w-16 h-16 bg-gradient-to-br from-brand-primary-green to-brand-dark-green rounded-full flex items-center justify-center text-white font-bold text-xl">
-                SM
-              </div>
-              <div className="text-left">
-                <div className="font-semibold text-gray-900 text-lg">Sarah Martinez</div>
-                <div className="text-gray-600">Development Director, Green Future Alliance</div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
