@@ -155,7 +155,7 @@ const AppShowcase = () => {
                       <div className="w-5 h-5 bg-orange-100 rounded-full flex items-center justify-center">
                         <span className="text-orange-600 text-xs">!</span>
                       </div>
-                      <span className="text-gray-700">Annual budget {'>'}$100K recommended</span>
+                      <span className="text-gray-700">Annual budget &gt;$100K recommended</span>
                     </div>
                   </div>
                 </div>
@@ -388,239 +388,84 @@ const AppShowcase = () => {
       icon: PenTool,
       highlight: "570/800 words • AI Suggestions",
       mockupContent: (
-        <div className="p-8 h-full bg-gray-50">
-          <div className="flex h-full gap-8">
-            {/* Sidebar */}
-            <div className="w-80 bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-              <div className="flex items-center gap-3 mb-8">
-                <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">FS</span>
+        <div className="p-6 h-full bg-gray-50">
+          {/* AI Writing Alert at Top */}
+          <div className="mb-6">
+            <div className="bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 rounded-xl p-6">
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
+                    <span className="text-white text-sm">✨</span>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-800">AI Writing Assistant</h3>
+                    <p className="text-sm text-gray-600">Analyzing your organization data to craft compelling content</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900">FundSprout</h3>
-                  <p className="text-xs text-gray-500">AI Grant Writer</p>
+                <div className="flex items-center gap-2 bg-green-50 px-3 py-1 rounded-full">
+                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                  <span className="text-sm text-green-700 font-medium">Writing...</span>
                 </div>
               </div>
               
-              <div className="space-y-6">
-                <div>
-                  <h4 className="text-sm font-semibold text-gray-700 mb-4">Proposal Sections</h4>
-                  <div className="space-y-3">
-                    <div className="bg-blue-50 border-l-4 border-blue-500 rounded-r-lg p-4">
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="text-sm font-medium text-gray-800">Project Summary</span>
-                        <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs font-medium">Writing</span>
-                      </div>
-                      <div className="text-xs text-gray-600 mb-2">570 / 800 words</div>
-                      <div className="w-full bg-gray-200 rounded-full h-2">
-                        <div className="bg-blue-500 h-2 rounded-full transition-all duration-500" style={{width: '71%'}}></div>
-                      </div>
-                    </div>
-                    
-                    <div className="border rounded-lg p-4 hover:bg-gray-50 transition-colors cursor-pointer">
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="text-sm font-medium text-gray-800">Impact Statement</span>
-                        <span className="bg-green-100 text-green-700 px-2 py-1 rounded text-xs font-medium">Complete</span>
-                      </div>
-                      <div className="text-xs text-gray-600 mb-2">800 / 800 words</div>
-                      <div className="w-full bg-gray-200 rounded-full h-2">
-                        <div className="bg-green-500 h-2 rounded-full" style={{width: '100%'}}></div>
-                      </div>
-                    </div>
-                    
-                    <div className="border rounded-lg p-4 hover:bg-gray-50 transition-colors cursor-pointer opacity-60">
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="text-sm font-medium text-gray-800">Budget Narrative</span>
-                        <span className="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs font-medium">Pending</span>
-                      </div>
-                      <div className="text-xs text-gray-600 mb-2">0 / 600 words</div>
-                      <div className="w-full bg-gray-200 rounded-full h-2">
-                        <div className="bg-gray-300 h-2 rounded-full" style={{width: '0%'}}></div>
-                      </div>
-                    </div>
-                  </div>
+              <div className="bg-white rounded-lg p-4 mb-4">
+                <div className="text-sm text-gray-800 leading-relaxed">
+                  <p className="mb-3">
+                    Our evidence-based approach combines classroom instruction with outdoor learning experiences, creating measurable improvements in environmental literacy and stewardship behaviors. Recent assessments show that 
+                    <span className="bg-blue-100 text-blue-800 px-1 rounded animate-pulse ml-1">participating students demonstrate an 85% improvement in environmental knowledge scores</span>
+                    <span className="ml-1 w-2 h-5 bg-blue-400 animate-pulse inline-block"></span>
+                  </p>
                 </div>
+              </div>
+              
+              <div className="flex items-center justify-between">
+                <div className="flex gap-3">
+                  <button className="bg-green-500 text-white px-4 py-2 rounded-lg text-sm hover:bg-green-600 transition-colors">
+                    ✓ Accept
+                  </button>
+                  <button className="bg-gray-100 text-gray-700 px-4 py-2 rounded-lg text-sm hover:bg-gray-200 transition-colors">
+                    Edit
+                  </button>
+                  <button className="bg-red-100 text-red-700 px-4 py-2 rounded-lg text-sm hover:bg-red-200 transition-colors">
+                    ✕ Reject
+                  </button>
+                </div>
+                <div className="text-sm text-gray-500">570 / 800 words</div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Main Editor Area */}
+          <div className="bg-white rounded-xl shadow-sm border border-gray-200 h-full">
+            <div className="flex items-center justify-between p-6 border-b border-gray-100">
+              <div className="flex items-center gap-4">
+                <h2 className="text-xl font-semibold text-gray-900">Environmental Education Initiative</h2>
+                <span className="text-gray-400">•</span>
+                <span className="text-gray-600">Project Summary</span>
+              </div>
+              <div className="flex gap-2">
+                <button className="bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+                  Save Draft
+                </button>
+                <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+                  Review
+                </button>
+              </div>
+            </div>
+            
+            <div className="p-6">
+              <div className="prose prose-lg max-w-none">
+                <p className="text-gray-800 leading-relaxed mb-4">
+                  Our organization is dedicated to fostering environmental awareness and education within underserved communities. Through innovative programming and community partnerships, we have successfully reached over 2,000 students and families in the past three years, creating lasting impact through hands-on learning experiences that connect classroom theory with real-world environmental challenges.
+                </p>
                 
-                <div className="border-t pt-6">
-                  <h4 className="text-sm font-semibold text-gray-700 mb-4">AI Assistant</h4>
-                  <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-4 border border-blue-100">
-                    <div className="flex items-center gap-2 mb-3">
-                      <div className="w-6 h-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
-                        <span className="text-white text-xs">✨</span>
-                      </div>
-                      <span className="text-sm font-medium text-gray-800">Writing Assistant</span>
-                      <div className="ml-auto flex gap-1">
-                        <div className="w-1 h-1 bg-green-500 rounded-full animate-pulse"></div>
-                        <div className="w-1 h-1 bg-green-500 rounded-full animate-pulse" style={{animationDelay: '0.3s'}}></div>
-                        <div className="w-1 h-1 bg-green-500 rounded-full animate-pulse" style={{animationDelay: '0.6s'}}></div>
-                      </div>
-                    </div>
-                    <p className="text-xs text-gray-600 mb-3">I'm analyzing your organization's data to craft compelling content that aligns with funder priorities.</p>
-                    <div className="flex gap-2">
-                      <button className="text-xs bg-blue-500 text-white px-3 py-2 rounded-lg hover:bg-blue-600 transition-colors">
-                        Continue Writing
-                      </button>
-                      <button className="text-xs border border-gray-300 text-gray-600 px-3 py-2 rounded-lg hover:bg-gray-50 transition-colors">
-                        Pause
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            {/* Main Editor */}
-            <div className="flex-1 bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-              <div className="flex items-center justify-between p-6 border-b border-gray-100">
-                <div className="flex items-center gap-4">
-                  <h2 className="text-xl font-semibold text-gray-900">Environmental Education Initiative</h2>
-                  <span className="text-gray-400">•</span>
-                  <span className="text-gray-600">Project Summary</span>
-                </div>
-                <div className="flex items-center gap-4">
-                  <div className="flex items-center gap-3">
-                    <span className="text-sm text-gray-500">570/800 words</span>
-                    <div className="flex items-center gap-2 bg-green-50 px-3 py-1 rounded-full">
-                      <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                      <span className="text-sm text-green-700 font-medium">AI Writing</span>
-                    </div>
-                  </div>
-                  <div className="flex gap-2">
-                    <button className="bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-lg text-sm font-medium transition-colors">
-                      Save Draft
-                    </button>
-                    <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
-                      Review
-                    </button>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="p-8 h-full overflow-y-auto">
-                <div className="max-w-4xl mx-auto space-y-6">
-                  <div className="prose prose-lg max-w-none">
-                    <p className="text-gray-800 leading-relaxed">
-                      Our organization is dedicated to fostering environmental awareness and education within underserved communities. Through innovative programming and community partnerships, we have successfully reached over 2,000 students and families in the past three years, creating lasting impact through hands-on learning experiences that connect classroom theory with real-world environmental challenges.
-                    </p>
-                    
-                    <p className="text-gray-800 leading-relaxed">
-                      The proposed Environmental Education Initiative represents a strategic expansion of our proven curriculum, designed to reach an additional 500 students annually across five elementary schools in low-income neighborhoods.
-                    </p>
-                  </div>
-                  
-                  {/* AI Writing in Progress */}
-                  <div className="relative">
-                    <div className="bg-gradient-to-r from-blue-50 to-purple-50 border-l-4 border-blue-400 rounded-r-xl p-6 relative overflow-hidden">
-                      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-400 to-purple-400"></div>
-                      
-                      <div className="flex items-center gap-3 mb-4">
-                        <div className="flex items-center gap-2 bg-white px-3 py-1 rounded-full shadow-sm">
-                          <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full animate-pulse"></div>
-                          <span className="text-sm font-medium text-gray-700">AI is writing...</span>
-                        </div>
-                        <div className="text-xs text-gray-500">Analyzing funder priorities • Adding impact metrics</div>
-                      </div>
-                      
-                      <div className="space-y-4">
-                        <p className="text-gray-800 leading-relaxed">
-                          Our evidence-based approach combines classroom instruction with outdoor learning experiences, creating measurable improvements in environmental literacy and stewardship behaviors. Recent assessments show that 
-                          <span className="bg-blue-100 text-blue-800 px-1 rounded animate-pulse">participating students demonstrate an 85% improvement in environmental knowledge scores</span>
-                          <span className="ml-1 w-2 h-5 bg-blue-400 animate-pulse inline-block"></span>
-                        </p>
-                        
-                        <div className="bg-white/80 rounded-lg p-4 border border-blue-200">
-                          <div className="flex items-center justify-between mb-3">
-                            <span className="text-sm font-medium text-gray-700">AI Suggestions</span>
-                            <div className="flex gap-2">
-                              <button className="text-xs bg-green-500 text-white px-3 py-1 rounded-full hover:bg-green-600 transition-colors">
-                                ✓ Accept
-                              </button>
-                              <button className="text-xs bg-gray-100 text-gray-600 px-3 py-1 rounded-full hover:bg-gray-200 transition-colors">
-                                Edit
-                              </button>
-                              <button className="text-xs bg-red-100 text-red-600 px-3 py-1 rounded-full hover:bg-red-200 transition-colors">
-                                ✕ Reject
-                              </button>
-                            </div>
-                          </div>
-                          <div className="text-sm text-gray-600 space-y-2">
-                            <p>• Add specific timeline for implementation phases</p>
-                            <p>• Include sustainability plan beyond grant period</p>
-                            <p>• Highlight partnership with local environmental organizations</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="prose prose-lg max-w-none">
-                    <p className="text-gray-800 leading-relaxed">
-                      Research demonstrates that environmental education programs implemented in elementary settings show the highest retention rates and behavioral change outcomes. Our curriculum integrates STEM learning objectives with environmental science concepts, ensuring alignment with state educational standards while fostering critical thinking skills essential for the next generation of environmental stewards.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            {/* Right Panel - Quick Actions */}
-            <div className="w-72 space-y-6">
-              <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-5">
-                <h4 className="font-semibold text-gray-800 mb-4 flex items-center gap-2">
-                  <span className="text-purple-500">⚡</span>
-                  Quick Actions
-                </h4>
-                <div className="space-y-3">
-                  <button className="w-full text-left flex items-center gap-3 text-sm p-3 hover:bg-purple-50 rounded-lg transition-colors group">
-                    <span className="text-purple-500 group-hover:scale-110 transition-transform">✨</span>
-                    <span className="text-gray-700 font-medium">Make more compelling</span>
-                  </button>
-                  <button className="w-full text-left flex items-center gap-3 text-sm p-3 hover:bg-blue-50 rounded-lg transition-colors group">
-                    <span className="text-blue-500 group-hover:scale-110 transition-transform">📊</span>
-                    <span className="text-gray-700 font-medium">Add statistics</span>
-                  </button>
-                  <button className="w-full text-left flex items-center gap-3 text-sm p-3 hover:bg-green-50 rounded-lg transition-colors group">
-                    <span className="text-green-500 group-hover:scale-110 transition-transform">🎯</span>
-                    <span className="text-gray-700 font-medium">Match funder priorities</span>
-                  </button>
-                  <button className="w-full text-left flex items-center gap-3 text-sm p-3 hover:bg-orange-50 rounded-lg transition-colors group">
-                    <span className="text-orange-500 group-hover:scale-110 transition-transform">📝</span>
-                    <span className="text-gray-700 font-medium">Improve clarity</span>
-                  </button>
-                </div>
-              </div>
-              
-              <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-5">
-                <h4 className="font-semibold text-gray-800 mb-4 flex items-center gap-2">
-                  <span className="text-yellow-500">💡</span>
-                  Smart Suggestions
-                </h4>
-                <div className="space-y-4">
-                  <div className="bg-gradient-to-r from-yellow-50 to-orange-50 border border-yellow-200 p-4 rounded-lg">
-                    <div className="flex items-start gap-3">
-                      <span className="text-yellow-500 mt-1">⚠️</span>
-                      <div>
-                        <p className="text-sm font-medium text-gray-800 mb-1">Add Implementation Timeline</p>
-                        <p className="text-xs text-gray-600 mb-3">Funders want to see clear project phases and milestones</p>
-                        <button className="text-xs bg-yellow-500 text-white px-3 py-1 rounded-full hover:bg-yellow-600 transition-colors">
-                          Generate ✨
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 p-4 rounded-lg">
-                    <div className="flex items-start gap-3">
-                      <span className="text-green-500 mt-1">📈</span>
-                      <div>
-                        <p className="text-sm font-medium text-gray-800 mb-1">Strengthen Impact Metrics</p>
-                        <p className="text-xs text-gray-600 mb-3">Add measurable outcomes and success indicators</p>
-                        <button className="text-xs bg-green-500 text-white px-3 py-1 rounded-full hover:bg-green-600 transition-colors">
-                          Generate ✨
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <p className="text-gray-800 leading-relaxed mb-4">
+                  The proposed Environmental Education Initiative represents a strategic expansion of our proven curriculum, designed to reach an additional 500 students annually across five elementary schools in low-income neighborhoods.
+                </p>
+                
+                <p className="text-gray-800 leading-relaxed">
+                  Research demonstrates that environmental education programs implemented in elementary settings show the highest retention rates and behavioral change outcomes. Our curriculum integrates STEM learning objectives with environmental science concepts, ensuring alignment with state educational standards while fostering critical thinking skills essential for the next generation of environmental stewards.
+                </p>
               </div>
             </div>
           </div>
