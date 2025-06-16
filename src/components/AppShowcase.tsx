@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Search, FileText, BarChart3, PenTool, CheckCircle } from 'lucide-react';
@@ -156,7 +155,7 @@ const AppShowcase = () => {
                       <div className="w-5 h-5 bg-orange-100 rounded-full flex items-center justify-center">
                         <span className="text-orange-600 text-xs">!</span>
                       </div>
-                      <span className="text-gray-700">Annual budget >$100K recommended</span>
+                      <span className="text-gray-700">Annual budget {'>'} $100K recommended</span>
                     </div>
                   </div>
                 </div>
