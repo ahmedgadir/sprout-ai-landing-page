@@ -9,7 +9,7 @@ const AppShowcase = () => {
     {
       id: 1,
       title: "Discover Perfect Grants",
-      description: "AI-powered matching finds grants that fit your mission with 90%+ accuracy",
+      description: "AI-powered matching finds grants that fit your mission",
       icon: Search,
       highlight: "3 grants found matching your criteria",
       mockupContent: (
@@ -89,7 +89,7 @@ const AppShowcase = () => {
     {
       id: 2,
       title: "Get Detailed Insights",
-      description: "See why each grant is a perfect match with AI-generated compatibility scores",
+      description: "See why each grant is a perfect match with AI-generated scores",
       icon: FileText,
       highlight: "92% fit • Excellent Match",
       mockupContent: (
@@ -223,7 +223,7 @@ const AppShowcase = () => {
     {
       id: 3,
       title: "Track Everything",
-      description: "Never miss a deadline with smart application management and progress tracking",
+      description: "Never miss a deadline with smart application management",
       icon: BarChart3,
       highlight: "5 applications • 2 urgent deadlines",
       mockupContent: (
@@ -384,7 +384,7 @@ const AppShowcase = () => {
     {
       id: 4,
       title: "AI-Powered Writing",
-      description: "Draft compelling proposals 10x faster with intelligent writing assistance",
+      description: "Draft compelling proposals 10x faster with AI assistance",
       icon: PenTool,
       highlight: "570/800 words • AI Suggestions",
       mockupContent: (
@@ -615,7 +615,7 @@ const AppShowcase = () => {
     {
       id: 5,
       title: "Manage Reports",
-      description: "Stay compliant with automated progress reports and milestone tracking",
+      description: "Stay compliant with automated progress reports",
       icon: CheckCircle,
       highlight: "All reports up to date",
       mockupContent: (
@@ -712,9 +712,14 @@ const AppShowcase = () => {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-dark-green mb-6">
             Watch How Easy Grant Success Can Be
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            From discovery to reporting — FundSprout's comprehensive platform handles every step of your grant journey
-          </p>
+          <div className="space-y-2">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              From discovery to reporting — our comprehensive platform handles every step of your grant journey
+            </p>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              From discovery to reporting — FundSprout's comprehensive platform handles every step of your grant journey
+            </p>
+          </div>
         </div>
 
         <div className="flex justify-center mb-12">
@@ -785,7 +790,7 @@ const AppShowcase = () => {
           <div className="text-left">
             <div className="font-semibold text-gray-900 text-xl mb-6">Ahmed Ali, CEO, Injaz Toronto</div>
             <blockquote className="text-xl text-gray-800 leading-relaxed font-medium">
-              "We've been beta testing FundSprout for the past few months, and it's already transformed how we approach grant applications. The AI matching helped us discover funding opportunities we would have never found otherwise, and the writing assistance made our proposals much more compelling. Even in beta, we've successfully secured our first grant using the platform - something that used to take us months of research and writing now happened in just weeks."
+              "We've been beta testing FundSprout for the past few months, and it's already transformed how we approach grant applications. The AI matching helped us discover funding opportunities we would have never found otherwise, and the writing assistance made our proposals much more compelling. We're still in the early stages with the platform, but we're already seeing promising results in our grant research and application process."
             </blockquote>
           </div>
         </div>
