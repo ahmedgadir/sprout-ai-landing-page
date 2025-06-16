@@ -781,17 +781,12 @@ const AppShowcase = () => {
         </div>
 
         {/* Customer Testimonial */}
-        <div className="mt-16 max-w-6xl mx-auto text-center">
-          <blockquote className="text-2xl lg:text-3xl text-gray-800 leading-relaxed font-medium mb-8">
-            "FundSprout has completely changed how we approach funding applications. The AI-powered matching saved us countless hours, and the writing assistant helped us craft our most compelling proposal yet. We secured three major grants in our first six months using the platform."
-          </blockquote>
-          <p className="text-xl text-gray-600 mb-8">
-            What used to take weeks of research and writing now takes just days. The platform's insights helped us understand exactly what funders were looking for, and we could tailor our applications accordingly.
-            <span className="text-gray-800 font-semibold"> Our success rate increased by 300% compared to our previous approach.</span>
-          </p>
-          <div className="text-left inline-block">
-            <div className="font-semibold text-gray-900 text-lg">Ahmed Ali</div>
-            <div className="text-gray-600">CEO, Injaz Toronto</div>
+        <div className="mt-16 max-w-6xl mx-auto">
+          <div className="text-left">
+            <div className="font-semibold text-gray-900 text-xl mb-6">Ahmed Ali, CEO, Injaz Toronto</div>
+            <blockquote className="text-xl text-gray-800 leading-relaxed font-medium">
+              "We've been beta testing FundSprout for the past few months, and it's already transformed how we approach grant applications. The AI matching helped us discover funding opportunities we would have never found otherwise, and the writing assistance made our proposals much more compelling. Even in beta, we've successfully secured our first grant using the platform - something that used to take us months of research and writing now happened in just weeks."
+            </blockquote>
           </div>
         </div>
       </div>
