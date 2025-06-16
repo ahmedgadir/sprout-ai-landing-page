@@ -14,40 +14,73 @@ const AppShowcase = () => {
       icon: Search,
       highlight: "3 grants found matching your criteria",
       mockupContent: (
-        <div className="p-6 space-y-4">
-          <div className="flex items-center justify-between mb-6">
-            <h3 className="text-xl font-semibold text-gray-800">Grant Discovery</h3>
-            <div className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">3 Matches Found</div>
+        <div className="p-8 h-full">
+          <div className="flex items-center justify-between mb-8">
+            <h3 className="text-2xl font-semibold text-gray-800">Grant Discovery</h3>
+            <div className="bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium">3 Matches Found</div>
           </div>
           
-          <div className="space-y-4">
-            <div className="border border-green-200 bg-green-50 rounded-lg p-4 relative">
-              <div className="absolute top-3 right-3 bg-green-500 text-white px-2 py-1 rounded text-xs font-semibold">92% Match</div>
-              <h4 className="font-semibold text-gray-800 mb-2">Environmental Education Initiative Grant</h4>
-              <p className="text-sm text-gray-600 mb-3">Supporting organizations focused on environmental education and community outreach programs.</p>
-              <div className="flex justify-between items-center text-sm">
-                <span className="text-green-600 font-medium">Due: March 15, 2024</span>
-                <span className="text-gray-500">$50,000 - $150,000</span>
+          <div className="space-y-6">
+            <div className="border border-green-200 bg-green-50 rounded-xl p-6 relative">
+              <div className="absolute top-4 right-4 bg-green-500 text-white px-3 py-2 rounded-lg text-sm font-semibold">92% Match</div>
+              <h4 className="font-semibold text-gray-800 mb-3 text-lg">Environmental Education Initiative Grant</h4>
+              <p className="text-gray-600 mb-4 leading-relaxed">Supporting organizations focused on environmental education and community outreach programs. Priority given to innovative approaches that demonstrate measurable impact on community environmental awareness.</p>
+              <div className="grid grid-cols-2 gap-4 mb-4">
+                <div className="bg-white p-3 rounded-lg">
+                  <span className="text-sm text-gray-500">Award Range</span>
+                  <p className="font-semibold text-gray-800">$50,000 - $150,000</p>
+                </div>
+                <div className="bg-white p-3 rounded-lg">
+                  <span className="text-sm text-gray-500">Application Deadline</span>
+                  <p className="font-semibold text-green-600">March 15, 2024</p>
+                </div>
+              </div>
+              <div className="flex gap-2">
+                <span className="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Environmental</span>
+                <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Education</span>
+                <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs">Community Impact</span>
               </div>
             </div>
             
-            <div className="border border-blue-200 bg-blue-50 rounded-lg p-4 relative">
-              <div className="absolute top-3 right-3 bg-blue-500 text-white px-2 py-1 rounded text-xs font-semibold">87% Match</div>
-              <h4 className="font-semibold text-gray-800 mb-2">Community Health & Wellness Fund</h4>
-              <p className="text-sm text-gray-600 mb-3">Grants for nonprofits working to improve community health outcomes through education.</p>
-              <div className="flex justify-between items-center text-sm">
-                <span className="text-blue-600 font-medium">Due: April 1, 2024</span>
-                <span className="text-gray-500">$25,000 - $75,000</span>
+            <div className="border border-blue-200 bg-blue-50 rounded-xl p-6 relative">
+              <div className="absolute top-4 right-4 bg-blue-500 text-white px-3 py-2 rounded-lg text-sm font-semibold">87% Match</div>
+              <h4 className="font-semibold text-gray-800 mb-3 text-lg">Community Health & Wellness Fund</h4>
+              <p className="text-gray-600 mb-4 leading-relaxed">Grants for nonprofits working to improve community health outcomes through education and preventive care programs.</p>
+              <div className="grid grid-cols-2 gap-4 mb-4">
+                <div className="bg-white p-3 rounded-lg">
+                  <span className="text-sm text-gray-500">Award Range</span>
+                  <p className="font-semibold text-gray-800">$25,000 - $75,000</p>
+                </div>
+                <div className="bg-white p-3 rounded-lg">
+                  <span className="text-sm text-gray-500">Application Deadline</span>
+                  <p className="font-semibold text-blue-600">April 1, 2024</p>
+                </div>
+              </div>
+              <div className="flex gap-2">
+                <span className="bg-red-100 text-red-800 px-2 py-1 rounded text-xs">Health</span>
+                <span className="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Community</span>
+                <span className="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs">Prevention</span>
               </div>
             </div>
             
-            <div className="border border-orange-200 bg-orange-50 rounded-lg p-4 relative">
-              <div className="absolute top-3 right-3 bg-orange-500 text-white px-2 py-1 rounded text-xs font-semibold">84% Match</div>
-              <h4 className="font-semibold text-gray-800 mb-2">Youth Development Program Grant</h4>
-              <p className="text-sm text-gray-600 mb-3">Supporting after-school and summer programs focused on youth development and education.</p>
-              <div className="flex justify-between items-center text-sm">
-                <span className="text-orange-600 font-medium">Due: March 30, 2024</span>
-                <span className="text-gray-500">$10,000 - $40,000</span>
+            <div className="border border-orange-200 bg-orange-50 rounded-xl p-6 relative">
+              <div className="absolute top-4 right-4 bg-orange-500 text-white px-3 py-2 rounded-lg text-sm font-semibold">84% Match</div>
+              <h4 className="font-semibold text-gray-800 mb-3 text-lg">Youth Development Program Grant</h4>
+              <p className="text-gray-600 mb-4 leading-relaxed">Supporting after-school and summer programs focused on youth development and education in underserved communities.</p>
+              <div className="grid grid-cols-2 gap-4 mb-4">
+                <div className="bg-white p-3 rounded-lg">
+                  <span className="text-sm text-gray-500">Award Range</span>
+                  <p className="font-semibold text-gray-800">$10,000 - $40,000</p>
+                </div>
+                <div className="bg-white p-3 rounded-lg">
+                  <span className="text-sm text-gray-500">Application Deadline</span>
+                  <p className="font-semibold text-orange-600">March 30, 2024</p>
+                </div>
+              </div>
+              <div className="flex gap-2">
+                <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Youth</span>
+                <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs">Education</span>
+                <span className="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Development</span>
               </div>
             </div>
           </div>
@@ -61,81 +94,126 @@ const AppShowcase = () => {
       icon: FileText,
       highlight: "92% fit • Excellent Match",
       mockupContent: (
-        <div className="p-6">
-          <div className="mb-6">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-              <h3 className="text-xl font-semibold text-gray-800">Environmental Education Initiative Grant</h3>
-              <div className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold ml-auto">92% Match</div>
+        <div className="p-8 h-full">
+          <div className="mb-8">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-4 h-4 bg-green-500 rounded-full"></div>
+              <h3 className="text-2xl font-semibold text-gray-800">Environmental Education Initiative Grant</h3>
+              <div className="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold ml-auto">92% Match</div>
             </div>
             
-            <div className="grid grid-cols-2 gap-6">
-              <div className="space-y-4">
-                <div>
-                  <h4 className="font-semibold text-gray-700 mb-2">Why This Grant Fits</h4>
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                      <span className="text-sm text-gray-600">Environmental focus aligns perfectly</span>
+            <div className="grid grid-cols-2 gap-8">
+              <div className="space-y-6">
+                <div className="bg-white p-6 rounded-xl border border-gray-200">
+                  <h4 className="font-semibold text-gray-700 mb-4 text-lg">Why This Grant Fits</h4>
+                  <div className="space-y-3">
+                    <div className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
+                      <div>
+                        <p className="font-medium text-gray-800">Environmental Focus Alignment</p>
+                        <p className="text-sm text-gray-600">Your organization's environmental education programs directly match the funder's priority areas</p>
+                      </div>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                      <span className="text-sm text-gray-600">Education programs match criteria</span>
+                    <div className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
+                      <div>
+                        <p className="font-medium text-gray-800">Community Impact Track Record</p>
+                        <p className="text-sm text-gray-600">Your proven history of community outreach aligns with their impact requirements</p>
+                      </div>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                      <span className="text-sm text-gray-600">Community outreach component</span>
+                    <div className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
+                      <div>
+                        <p className="font-medium text-gray-800">Geographic Overlap</p>
+                        <p className="text-sm text-gray-600">Your service area matches 88% of their target regions</p>
+                      </div>
                     </div>
                   </div>
                 </div>
                 
-                <div>
-                  <h4 className="font-semibold text-gray-700 mb-2">Key Requirements</h4>
-                  <div className="text-sm text-gray-600 space-y-1">
-                    <p>• 501(c)(3) status required ✓</p>
-                    <p>• 2+ years operating history ✓</p>
-                    <p>• Environmental program focus ✓</p>
+                <div className="bg-white p-6 rounded-xl border border-gray-200">
+                  <h4 className="font-semibold text-gray-700 mb-4 text-lg">Key Requirements</h4>
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-3">
+                      <div className="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center">
+                        <CheckCircle className="w-3 h-3 text-green-600" />
+                      </div>
+                      <span className="text-gray-700">501(c)(3) status required</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center">
+                        <CheckCircle className="w-3 h-3 text-green-600" />
+                      </div>
+                      <span className="text-gray-700">2+ years operating history</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center">
+                        <CheckCircle className="w-3 h-3 text-green-600" />
+                      </div>
+                      <span className="text-gray-700">Environmental program focus</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="w-5 h-5 bg-orange-100 rounded-full flex items-center justify-center">
+                        <span className="text-orange-600 text-xs">!</span>
+                      </div>
+                      <span className="text-gray-700">Annual budget >$100K recommended</span>
+                    </div>
                   </div>
                 </div>
               </div>
               
-              <div className="space-y-4">
-                <div>
-                  <h4 className="font-semibold text-gray-700 mb-2">Compatibility Score</h4>
-                  <div className="space-y-3">
+              <div className="space-y-6">
+                <div className="bg-white p-6 rounded-xl border border-gray-200">
+                  <h4 className="font-semibold text-gray-700 mb-4 text-lg">Compatibility Score</h4>
+                  <div className="space-y-4">
                     <div>
-                      <div className="flex justify-between text-sm mb-1">
-                        <span>Mission Alignment</span>
-                        <span className="font-medium">95%</span>
+                      <div className="flex justify-between text-sm mb-2">
+                        <span className="font-medium">Mission Alignment</span>
+                        <span className="font-semibold text-green-600">95%</span>
                       </div>
-                      <div className="w-full bg-gray-200 rounded-full h-2">
-                        <div className="bg-green-500 h-2 rounded-full" style={{width: '95%'}}></div>
+                      <div className="w-full bg-gray-200 rounded-full h-3">
+                        <div className="bg-green-500 h-3 rounded-full" style={{width: '95%'}}></div>
                       </div>
                     </div>
                     <div>
-                      <div className="flex justify-between text-sm mb-1">
-                        <span>Program Fit</span>
-                        <span className="font-medium">90%</span>
+                      <div className="flex justify-between text-sm mb-2">
+                        <span className="font-medium">Program Fit</span>
+                        <span className="font-semibold text-green-600">90%</span>
                       </div>
-                      <div className="w-full bg-gray-200 rounded-full h-2">
-                        <div className="bg-green-500 h-2 rounded-full" style={{width: '90%'}}></div>
+                      <div className="w-full bg-gray-200 rounded-full h-3">
+                        <div className="bg-green-500 h-3 rounded-full" style={{width: '90%'}}></div>
                       </div>
                     </div>
                     <div>
-                      <div className="flex justify-between text-sm mb-1">
-                        <span>Geographic Match</span>
-                        <span className="font-medium">88%</span>
+                      <div className="flex justify-between text-sm mb-2">
+                        <span className="font-medium">Geographic Match</span>
+                        <span className="font-semibold text-green-600">88%</span>
                       </div>
-                      <div className="w-full bg-gray-200 rounded-full h-2">
-                        <div className="bg-green-500 h-2 rounded-full" style={{width: '88%'}}></div>
+                      <div className="w-full bg-gray-200 rounded-full h-3">
+                        <div className="bg-green-500 h-3 rounded-full" style={{width: '88%'}}></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div className="flex justify-between text-sm mb-2">
+                        <span className="font-medium">Capacity Match</span>
+                        <span className="font-semibold text-yellow-600">75%</span>
+                      </div>
+                      <div className="w-full bg-gray-200 rounded-full h-3">
+                        <div className="bg-yellow-500 h-3 rounded-full" style={{width: '75%'}}></div>
                       </div>
                     </div>
                   </div>
                 </div>
                 
-                <div className="bg-green-50 p-4 rounded-lg border border-green-200">
-                  <h5 className="font-semibold text-green-800 mb-1">Recommended Action</h5>
-                  <p className="text-sm text-green-700">High priority application - strong alignment with funder priorities</p>
+                <div className="bg-green-50 p-6 rounded-xl border border-green-200">
+                  <h5 className="font-semibold text-green-800 mb-2">Recommended Action</h5>
+                  <p className="text-green-700 mb-4">High priority application - strong alignment with funder priorities and excellent track record match.</p>
+                  <div className="space-y-2">
+                    <p className="text-sm text-green-700"><strong>Next Steps:</strong></p>
+                    <p className="text-sm text-green-700">• Review application guidelines (available in portal)</p>
+                    <p className="text-sm text-green-700">• Schedule program director interview</p>
+                    <p className="text-sm text-green-700">• Prepare 3-year impact projection</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -383,15 +461,15 @@ const AppShowcase = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveStep((prev) => (prev + 1) % steps.length);
-    }, 4000); // Change every 4 seconds
+    }, 5000);
 
     return () => clearInterval(interval);
   }, [steps.length]);
 
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-brand-light-green/20">
+    <section className="py-16 bg-gradient-to-b from-white to-brand-light-green/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-dark-green mb-6">
             See FundSprout in Action
           </h2>
@@ -400,119 +478,71 @@ const AppShowcase = () => {
           </p>
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-12 items-start">
-          {/* Steps Navigation */}
-          <div className="lg:w-1/3 space-y-6">
+        {/* Horizontal Step Navigation */}
+        <div className="flex justify-center mb-12">
+          <div className="bg-white rounded-2xl p-2 shadow-lg border border-gray-100 flex gap-2">
             {steps.map((step, index) => {
               const Icon = step.icon;
               const isActive = index === activeStep;
               
               return (
-                <div 
-                  key={step.id} 
-                  className={`cursor-pointer transition-all duration-300 ${isActive ? 'scale-105' : 'hover:scale-102'}`}
+                <button
+                  key={step.id}
                   onClick={() => setActiveStep(index)}
-                >
-                  <div className={`p-6 rounded-xl border-2 transition-all duration-300 ${
+                  className={`flex items-center gap-3 px-6 py-4 rounded-xl transition-all duration-300 ${
                     isActive 
-                      ? 'border-brand-primary-green bg-brand-light-green/50 shadow-lg' 
-                      : 'border-gray-200 bg-white hover:border-brand-primary-green/30'
-                  }`}>
-                    <div className="flex items-center gap-4 mb-4">
-                      <div className={`w-12 h-12 rounded-xl flex items-center justify-center transition-colors ${
-                        isActive ? 'bg-brand-primary-green' : 'bg-gray-100'
-                      }`}>
-                        <Icon className={`w-6 h-6 ${isActive ? 'text-white' : 'text-gray-600'}`} />
-                      </div>
-                      <span className={`font-semibold text-lg transition-colors ${
-                        isActive ? 'text-brand-primary-green' : 'text-gray-500'
-                      }`}>
-                        Step {step.id}
-                      </span>
-                    </div>
-                    
-                    <h3 className={`text-xl font-bold mb-3 transition-colors ${
-                      isActive ? 'text-brand-dark-green' : 'text-gray-700'
-                    }`}>
-                      {step.title}
-                    </h3>
-                    
-                    <p className={`leading-relaxed transition-colors ${
-                      isActive ? 'text-gray-700' : 'text-gray-600'
-                    }`}>
-                      {step.description}
-                    </p>
-                    
-                    <div className={`mt-4 p-3 rounded-lg border-l-4 transition-all ${
-                      isActive 
-                        ? 'bg-brand-light-green/50 border-brand-primary-green' 
-                        : 'bg-gray-50 border-gray-300'
-                    }`}>
-                      <p className={`font-medium transition-colors ${
-                        isActive ? 'text-brand-dark-green' : 'text-gray-600'
-                      }`}>
-                        ✨ {step.highlight}
-                      </p>
+                      ? 'bg-brand-primary-green text-white shadow-md' 
+                      : 'text-gray-600 hover:bg-gray-50'
+                  }`}
+                >
+                  <Icon className="w-5 h-5" />
+                  <div className="text-left">
+                    <div className="font-semibold text-sm">{step.title}</div>
+                    <div className={`text-xs ${isActive ? 'text-green-100' : 'text-gray-500'}`}>
+                      Step {step.id}
                     </div>
                   </div>
-                </div>
+                </button>
               );
             })}
           </div>
+        </div>
 
-          {/* Large Screen Display */}
-          <div className="lg:w-2/3">
-            <div className="relative">
-              {/* Browser Frame */}
-              <div className="bg-gray-100 rounded-t-xl p-4">
-                <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 bg-red-400 rounded-full"></div>
-                  <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
-                  <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-                  <div className="ml-4 bg-white rounded px-4 py-2 text-sm text-gray-500 font-mono">
-                    app.fundsprout.com
-                  </div>
-                </div>
-              </div>
-              
-              {/* App Content */}
-              <div className="bg-white rounded-b-xl shadow-2xl min-h-[500px] relative overflow-hidden">
-                {steps.map((step, index) => (
-                  <div
-                    key={step.id}
-                    className={`absolute inset-0 transition-all duration-500 ${
-                      index === activeStep 
-                        ? 'opacity-100 transform translate-x-0' 
-                        : index < activeStep 
-                          ? 'opacity-0 transform -translate-x-full' 
-                          : 'opacity-0 transform translate-x-full'
-                    }`}
-                  >
-                    {step.mockupContent}
-                  </div>
-                ))}
-              </div>
-              
-              {/* Step Counter */}
-              <div className="absolute -top-4 -right-4 bg-brand-orange-accent text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
-                {activeStep + 1} / {steps.length}
+        {/* Large Screen Display */}
+        <div className="relative max-w-6xl mx-auto">
+          {/* Browser Frame */}
+          <div className="bg-gray-100 rounded-t-xl p-4">
+            <div className="flex items-center gap-2">
+              <div className="w-3 h-3 bg-red-400 rounded-full"></div>
+              <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
+              <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+              <div className="ml-4 bg-white rounded px-4 py-2 text-sm text-gray-500 font-mono">
+                app.fundsprout.com
               </div>
             </div>
-            
-            {/* Progress Dots */}
-            <div className="flex justify-center mt-6 gap-2">
-              {steps.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setActiveStep(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === activeStep 
-                      ? 'bg-brand-primary-green scale-125' 
-                      : 'bg-gray-300 hover:bg-gray-400'
-                  }`}
-                />
-              ))}
-            </div>
+          </div>
+          
+          {/* App Content */}
+          <div className="bg-white rounded-b-xl shadow-2xl min-h-[700px] relative overflow-hidden">
+            {steps.map((step, index) => (
+              <div
+                key={step.id}
+                className={`absolute inset-0 transition-all duration-500 ${
+                  index === activeStep 
+                    ? 'opacity-100 transform translate-x-0' 
+                    : index < activeStep 
+                      ? 'opacity-0 transform -translate-x-full' 
+                      : 'opacity-0 transform translate-x-full'
+                }`}
+              >
+                {step.mockupContent}
+              </div>
+            ))}
+          </div>
+          
+          {/* Step Counter */}
+          <div className="absolute -top-4 -right-4 bg-brand-orange-accent text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
+            {activeStep + 1} / {steps.length}
           </div>
         </div>
 
