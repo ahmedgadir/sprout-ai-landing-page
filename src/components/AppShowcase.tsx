@@ -717,30 +717,6 @@ const AppShowcase = () => {
           </p>
         </div>
 
-        {/* Customer Testimonial */}
-        <div className="mb-16 max-w-6xl mx-auto">
-          <div className="bg-white rounded-2xl shadow-lg border border-brand-light-green/30 p-12 text-center">
-            <div className="mb-8">
-              <blockquote className="text-2xl lg:text-3xl text-gray-800 leading-relaxed font-medium mb-8">
-                "We've used FundSprout for far more than just grants. From grant reporting to startup accelerator applications, incubator programs, and customer pilot coordination—it's transformed our ability to quickly reformat and restate our value proposition to different audiences."
-              </blockquote>
-              <p className="text-xl text-gray-600 mb-4">
-                For our largest application, a 90+ page federal grant, I'm not sure how we would have completed it without FundSprout's help. 
-                <span className="text-gray-800 font-semibold"> Our recent phase two application was accepted, and we're moving forward to the next stage!</span>
-              </p>
-            </div>
-            <div className="flex items-center justify-center gap-4">
-              <div className="w-16 h-16 bg-gradient-to-br from-brand-primary-green to-brand-dark-green rounded-full flex items-center justify-center text-white font-bold text-xl">
-                AA
-              </div>
-              <div className="text-left">
-                <div className="font-semibold text-gray-900 text-lg">Ahmed Ali</div>
-                <div className="text-gray-600">CEO, Injaz Toronto</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         <div className="flex justify-center mb-12">
           <div className="bg-white rounded-2xl p-2 shadow-lg border border-gray-100 flex gap-2 overflow-x-auto">
             {steps.map((step, index) => {
@@ -801,6 +777,21 @@ const AppShowcase = () => {
           
           <div className="absolute -top-4 -right-4 bg-brand-orange-accent text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
             {activeStep + 1} / {steps.length}
+          </div>
+        </div>
+
+        {/* Customer Testimonial */}
+        <div className="mt-16 max-w-6xl mx-auto text-center">
+          <blockquote className="text-2xl lg:text-3xl text-gray-800 leading-relaxed font-medium mb-8">
+            "FundSprout has completely changed how we approach funding applications. The AI-powered matching saved us countless hours, and the writing assistant helped us craft our most compelling proposal yet. We secured three major grants in our first six months using the platform."
+          </blockquote>
+          <p className="text-xl text-gray-600 mb-8">
+            What used to take weeks of research and writing now takes just days. The platform's insights helped us understand exactly what funders were looking for, and we could tailor our applications accordingly.
+            <span className="text-gray-800 font-semibold"> Our success rate increased by 300% compared to our previous approach.</span>
+          </p>
+          <div className="text-left inline-block">
+            <div className="font-semibold text-gray-900 text-lg">Ahmed Ali</div>
+            <div className="text-gray-600">CEO, Injaz Toronto</div>
           </div>
         </div>
       </div>
