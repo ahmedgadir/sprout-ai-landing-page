@@ -227,85 +227,130 @@ const AppShowcase = () => {
       icon: BarChart3,
       highlight: "5 applications • 2 urgent deadlines",
       mockupContent: (
-        <div className="p-6">
-          <div className="flex items-center justify-between mb-6">
-            <h3 className="text-xl font-semibold text-gray-800">Application Dashboard</h3>
-            <div className="flex gap-2">
-              <div className="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium">2 Urgent</div>
-              <div className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">5 Active</div>
-            </div>
-          </div>
-          
-          <div className="space-y-3">
-            <div className="border border-red-200 bg-red-50 rounded-lg p-4">
-              <div className="flex items-center justify-between mb-2">
-                <h4 className="font-semibold text-gray-800">Environmental Education Initiative</h4>
-                <span className="text-red-600 font-semibold text-sm">Due in 3 days</span>
-              </div>
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <div className="w-full bg-gray-200 rounded-full h-2 max-w-32">
-                    <div className="bg-red-500 h-2 rounded-full" style={{width: '85%'}}></div>
-                  </div>
-                  <span className="text-sm text-gray-600">85% Complete</span>
+        <div className="p-8 h-full bg-gray-50">
+          {/* Left Sidebar */}
+          <div className="flex h-full">
+            <div className="w-64 bg-white rounded-lg shadow-sm border border-gray-200 p-4 mr-6">
+              <div className="flex items-center gap-3 mb-8">
+                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                  <span className="text-white font-semibold text-sm">SF</span>
                 </div>
-                <span className="text-sm text-gray-500">$150,000</span>
+                <span className="font-semibold text-gray-800">School Funding</span>
               </div>
+              
+              <nav className="space-y-2">
+                <div className="flex items-center gap-3 px-3 py-2 text-gray-600 hover:bg-gray-50 rounded-lg">
+                  <BarChart3 className="w-4 h-4" />
+                  <span className="text-sm">Dashboard</span>
+                </div>
+                <div className="flex items-center gap-3 px-3 py-2 text-gray-600 hover:bg-gray-50 rounded-lg">
+                  <Search className="w-4 h-4" />
+                  <span className="text-sm">Discover</span>
+                </div>
+                <div className="flex items-center gap-3 px-3 py-2 text-gray-600 hover:bg-gray-50 rounded-lg">
+                  <FileText className="w-4 h-4" />
+                  <span className="text-sm">Drafts & Proposals</span>
+                </div>
+                <div className="flex items-center gap-3 px-3 py-2 bg-green-50 text-green-700 rounded-lg">
+                  <CheckCircle className="w-4 h-4" />
+                  <span className="text-sm font-medium">Progress Reports</span>
+                </div>
+                <div className="flex items-center gap-3 px-3 py-2 text-gray-600 hover:bg-gray-50 rounded-lg">
+                  <FileText className="w-4 h-4" />
+                  <span className="text-sm">Documents</span>
+                </div>
+              </nav>
             </div>
             
-            <div className="border border-orange-200 bg-orange-50 rounded-lg p-4">
-              <div className="flex items-center justify-between mb-2">
-                <h4 className="font-semibold text-gray-800">Community Health & Wellness</h4>
-                <span className="text-orange-600 font-semibold text-sm">Due in 5 days</span>
-              </div>
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <div className="w-full bg-gray-200 rounded-full h-2 max-w-32">
-                    <div className="bg-orange-500 h-2 rounded-full" style={{width: '60%'}}></div>
+            {/* Main Content */}
+            <div className="flex-1">
+              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 h-full">
+                <div className="flex items-center justify-between mb-6">
+                  <div>
+                    <h2 className="text-2xl font-bold text-gray-900">Progress Reports</h2>
+                    <p className="text-gray-600">Track & manage your grant progress reports</p>
                   </div>
-                  <span className="text-sm text-gray-600">60% Complete</span>
+                  <button className="bg-green-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center gap-2">
+                    <span>New Report</span>
+                    <span className="text-lg">+</span>
+                  </button>
                 </div>
-                <span className="text-sm text-gray-500">$75,000</span>
-              </div>
-            </div>
-            
-            <div className="border border-blue-200 bg-blue-50 rounded-lg p-4">
-              <div className="flex items-center justify-between mb-2">
-                <h4 className="font-semibold text-gray-800">Youth Development Program</h4>
-                <span className="text-blue-600 font-semibold text-sm">Due in 12 days</span>
-              </div>
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <div className="w-full bg-gray-200 rounded-full h-2 max-w-32">
-                    <div className="bg-blue-500 h-2 rounded-full" style={{width: '30%'}}></div>
+                
+                {/* Filter Tabs */}
+                <div className="flex gap-6 mb-8 border-b border-gray-200">
+                  <button className="pb-3 border-b-2 border-green-500 text-green-600 font-medium">All Reports (4)</button>
+                  <button className="pb-3 text-gray-500 hover:text-gray-700">Drafts (2)</button>
+                  <button className="pb-3 text-gray-500 hover:text-gray-700">Review (1)</button>
+                  <button className="pb-3 text-gray-500 hover:text-gray-700">Submitted (1)</button>
+                  <button className="pb-3 text-gray-500 hover:text-gray-700">Overdue (1)</button>
+                </div>
+                
+                {/* Report Cards */}
+                <div className="grid grid-cols-3 gap-6">
+                  <div className="bg-white border border-gray-200 rounded-lg p-4">
+                    <div className="flex items-center justify-between mb-3">
+                      <h4 className="font-semibold text-gray-800">Women in Leadership Program</h4>
+                      <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded text-xs font-medium">In Progress</span>
+                    </div>
+                    <p className="text-sm text-gray-600 mb-4">Q2 2025</p>
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-2 text-sm">
+                        <span className="text-red-500">📅</span>
+                        <span className="text-gray-700">Due 10th Jan, 2025</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm">
+                        <span className="text-red-500">⚠️</span>
+                        <span className="text-red-600">Overdue by 6 months</span>
+                      </div>
+                    </div>
+                    <button className="w-full mt-4 bg-green-600 text-white py-2 px-3 rounded text-sm font-medium hover:bg-green-700 transition-colors">
+                      Continue →
+                    </button>
                   </div>
-                  <span className="text-sm text-gray-600">30% Complete</span>
-                </div>
-                <span className="text-sm text-gray-500">$40,000</span>
-              </div>
-            </div>
-            
-            <div className="border border-green-200 bg-green-50 rounded-lg p-4">
-              <div className="flex items-center justify-between mb-2">
-                <h4 className="font-semibold text-gray-800">Arts Education Foundation</h4>
-                <span className="text-green-600 font-semibold text-sm">Submitted ✓</span>
-              </div>
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <div className="w-full bg-gray-200 rounded-full h-2 max-w-32">
-                    <div className="bg-green-500 h-2 rounded-full" style={{width: '100%'}}></div>
+                  
+                  <div className="bg-white border border-gray-200 rounded-lg p-4">
+                    <div className="flex items-center justify-between mb-3">
+                      <h4 className="font-semibold text-gray-800">Women in Leadership Program</h4>
+                      <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded text-xs font-medium">In Progress</span>
+                    </div>
+                    <p className="text-sm text-gray-600 mb-4">Q2 2025</p>
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-2 text-sm">
+                        <span className="text-red-500">📅</span>
+                        <span className="text-gray-700">Due 10th Jan, 2025</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm">
+                        <span className="text-red-500">⚠️</span>
+                        <span className="text-red-600">Overdue by 6 months</span>
+                      </div>
+                    </div>
+                    <button className="w-full mt-4 bg-green-600 text-white py-2 px-3 rounded text-sm font-medium hover:bg-green-700 transition-colors">
+                      Continue →
+                    </button>
                   </div>
-                  <span className="text-sm text-gray-600">Awaiting Review</span>
+                  
+                  <div className="bg-white border border-gray-200 rounded-lg p-4">
+                    <div className="flex items-center justify-between mb-3">
+                      <h4 className="font-semibold text-gray-800">Women in Leadership Program</h4>
+                      <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded text-xs font-medium">In Progress</span>
+                    </div>
+                    <p className="text-sm text-gray-600 mb-4">Q2 2025</p>
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-2 text-sm">
+                        <span className="text-red-500">📅</span>
+                        <span className="text-gray-700">Due 10th Jan, 2025</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm">
+                        <span className="text-red-500">⚠️</span>
+                        <span className="text-red-600">Overdue by 6 months</span>
+                      </div>
+                    </div>
+                    <button className="w-full mt-4 bg-green-600 text-white py-2 px-3 rounded text-sm font-medium hover:bg-green-700 transition-colors">
+                      Continue →
+                    </button>
+                  </div>
                 </div>
-                <span className="text-sm text-gray-500">$25,000</span>
               </div>
-            </div>
-          </div>
-          
-          <div className="mt-6 p-4 bg-gray-50 rounded-lg">
-            <div className="flex items-center justify-between">
-              <span className="font-semibold text-gray-700">Total Pipeline Value</span>
-              <span className="text-2xl font-bold text-brand-primary-green">$290K</span>
             </div>
           </div>
         </div>
@@ -318,55 +363,173 @@ const AppShowcase = () => {
       icon: PenTool,
       highlight: "570/800 words • AI Suggestions",
       mockupContent: (
-        <div className="p-6">
-          <div className="flex items-center justify-between mb-6">
-            <h3 className="text-xl font-semibold text-gray-800">Grant Proposal Editor</h3>
-            <div className="flex gap-2">
-              <div className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">570/800 words</div>
-              <div className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">AI Active</div>
-            </div>
-          </div>
-          
-          <div className="space-y-4">
-            <div className="border rounded-lg p-4 bg-white">
-              <h4 className="font-semibold text-gray-700 mb-3">Project Description</h4>
-              <div className="text-sm text-gray-600 leading-relaxed space-y-2">
-                <p>Our organization seeks funding to expand our environmental education programs, which have successfully reached over 2,500 students in the past year. The proposed initiative will develop comprehensive curriculum modules focused on sustainable practices and climate change awareness.</p>
-                
-                <div className="bg-blue-50 border-l-4 border-blue-400 p-3 my-3">
-                  <div className="flex items-start gap-2">
-                    <div className="bg-blue-400 text-white text-xs px-2 py-1 rounded mt-0.5">AI</div>
-                    <div>
-                      <p className="text-blue-800 font-medium text-xs mb-1">Suggestion:</p>
-                      <p className="text-blue-700 text-sm">Consider adding specific metrics about student engagement or learning outcomes to strengthen this paragraph.</p>
-                      <div className="flex gap-2 mt-2">
-                        <button className="text-xs bg-blue-500 text-white px-2 py-1 rounded hover:bg-blue-600">Apply</button>
-                        <button className="text-xs border border-blue-300 text-blue-600 px-2 py-1 rounded hover:bg-blue-50">Dismiss</button>
-                      </div>
+        <div className="p-8 h-full bg-gray-50">
+          <div className="flex h-full gap-6">
+            {/* Left Sidebar */}
+            <div className="w-64 bg-white rounded-lg shadow-sm border border-gray-200 p-4">
+              <div className="flex items-center gap-3 mb-8">
+                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                  <span className="text-white font-semibold text-sm">SF</span>
+                </div>
+                <span className="font-semibold text-gray-800">School Funding</span>
+              </div>
+              
+              <div className="mb-6">
+                <h3 className="text-sm font-semibold text-gray-700 mb-3">Checklists</h3>
+                <div className="space-y-2">
+                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-3">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="text-blue-600">📝</span>
+                      <span className="text-sm font-medium text-gray-800">Narrative Summary</span>
+                      <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Draft</span>
+                    </div>
+                    <div className="text-xs text-gray-600 mb-2">570/800 words</div>
+                    <div className="w-full bg-gray-200 rounded-full h-2">
+                      <div className="bg-blue-500 h-2 rounded-full" style={{width: '71%'}}></div>
+                    </div>
+                  </div>
+                  
+                  <div className="border border-gray-200 rounded-lg p-3">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="text-green-600">✅</span>
+                      <span className="text-sm font-medium text-gray-800">Impact</span>
+                      <span className="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Done</span>
+                    </div>
+                    <div className="text-xs text-gray-600 mb-2">800/800 words</div>
+                    <div className="w-full bg-gray-200 rounded-full h-2">
+                      <div className="bg-green-500 h-2 rounded-full" style={{width: '100%'}}></div>
                     </div>
                   </div>
                 </div>
-                
-                <p>Through partnerships with local schools and community centers, we will implement hands-on learning experiences that demonstrate real-world applications of environmental science. Our proven track record includes:</p>
-                
-                <ul className="ml-4 space-y-1">
-                  <li>• 95% student satisfaction rate in current programs</li>
-                  <li>• Partnership with 15 local educational institutions</li>
-                  <li>• Award recognition from State Environmental Council</li>
-                </ul>
               </div>
             </div>
             
-            <div className="flex gap-3">
-              <button className="flex-1 bg-brand-primary-green text-white px-4 py-2 rounded-lg font-medium hover:bg-brand-dark-green transition-colors">
-                Generate Content
-              </button>
-              <button className="flex-1 border border-gray-300 text-gray-700 px-4 py-2 rounded-lg font-medium hover:bg-gray-50 transition-colors">
-                Check Grammar
-              </button>
-              <button className="flex-1 border border-blue-300 text-blue-700 px-4 py-2 rounded-lg font-medium hover:bg-blue-50 transition-colors">
-                AI Review
-              </button>
+            {/* Main Content */}
+            <div className="flex-1 bg-white rounded-lg shadow-sm border border-gray-200">
+              <div className="flex items-center justify-between p-6 border-b border-gray-200">
+                <div className="flex items-center gap-4">
+                  <button className="text-gray-400 hover:text-gray-600">←</button>
+                  <h2 className="text-xl font-semibold text-gray-800">Grant Application</h2>
+                  <span className="text-gray-500">(Community Wellness Fund | $250,000)</span>
+                </div>
+                <div className="flex items-center gap-4">
+                  <div className="flex items-center gap-2">
+                    <span className="text-sm text-gray-600">570/800 words • Last saved: 2 min ago</span>
+                  </div>
+                  <div className="flex gap-2">
+                    <button className="bg-gray-100 text-gray-700 px-3 py-2 rounded-lg text-sm font-medium hover:bg-gray-200 flex items-center gap-2">
+                      <span>🤖</span>
+                      AI Suggestions
+                    </button>
+                    <button className="bg-gray-100 text-gray-700 px-3 py-2 rounded-lg text-sm font-medium hover:bg-gray-200 flex items-center gap-2">
+                      <span>🔍</span>
+                      Research
+                    </button>
+                    <button className="bg-gray-100 text-gray-700 px-3 py-2 rounded-lg text-sm font-medium hover:bg-gray-200 flex items-center gap-2">
+                      <span>💬</span>
+                      Chat
+                    </button>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="p-6">
+                <div className="flex justify-between items-center mb-4">
+                  <h3 className="text-lg font-semibold text-gray-700">Narrative Summary</h3>
+                </div>
+                
+                <div className="prose max-w-none">
+                  <p className="text-gray-700 leading-relaxed mb-4">
+                    Lorem ipsum dolor sit amet consectetur. Vel dictumst cras cras consequat aenean ultricies cras ipsum. Eget malesuada nunc mollis penatibus. Nisl placerat auctor vel semper varius aliquet viverra. Nulla consectetur id blandit in et vulputate fermentum nec. Libero at ut massa ut vulputate. Lectus consequat eu amet venenatis venenatis tristique dui sed mattis.
+                  </p>
+                  
+                  {/* AI Writing in Progress */}
+                  <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-4 rounded-r-lg">
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className="bg-blue-500 text-white text-xs px-2 py-1 rounded">AI</div>
+                      <span className="text-blue-800 font-medium text-sm">Writing in progress...</span>
+                      <div className="flex gap-1">
+                        <div className="w-1 h-1 bg-blue-500 rounded-full animate-pulse"></div>
+                        <div className="w-1 h-1 bg-blue-500 rounded-full animate-pulse" style={{animationDelay: '0.2s'}}></div>
+                        <div className="w-1 h-1 bg-blue-500 rounded-full animate-pulse" style={{animationDelay: '0.4s'}}></div>
+                      </div>
+                    </div>
+                    <p className="text-blue-700 text-sm leading-relaxed">
+                      Our comprehensive program will implement evidence-based curriculum modules that address critical gaps in environmental education. Through innovative partnerships with local schools and community organizations, we will create sustainable learning pathways that demonstrate measurable impact on student engagement and environmental awareness. <span className="animate-pulse">|</span>
+                    </p>
+                    <div className="flex gap-2 mt-3">
+                      <button className="text-xs bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600">Accept</button>
+                      <button className="text-xs border border-blue-300 text-blue-600 px-3 py-1 rounded hover:bg-blue-50">Regenerate</button>
+                      <button className="text-xs border border-gray-300 text-gray-600 px-3 py-1 rounded hover:bg-gray-50">Reject</button>
+                    </div>
+                  </div>
+                  
+                  <p className="text-gray-700 leading-relaxed mb-4">
+                    Volutpat sed nulla tellus laoreet tortor dictum quis tincidunt. Elit tempor at pharetra potenti praesent in nam massa. Pharetra vel dapibus donec arcu. Quam in egestas est suspendisse tristique a. Viverra netus ullamcorper ipsum pellentesque pretium enim dui.
+                  </p>
+                  
+                  <p className="text-gray-700 leading-relaxed">
+                    Vulputate quam luctus viverra ipsum congue. Ipsum sit sodales massa accumsan vel nec. Quam tellus facilisi tortor amet in nullam sed nisl.
+                  </p>
+                </div>
+              </div>
+            
+            {/* Right Sidebar */}
+            <div className="w-80 space-y-4">
+              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4">
+                <h4 className="font-semibold text-gray-700 mb-3">Quick Improvements</h4>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-2 text-sm">
+                    <span className="text-pink-500">✨</span>
+                    <span className="text-gray-700">Shorten</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm">
+                    <span className="text-pink-500">🎯</span>
+                    <span className="text-gray-700">Adjust Tone</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm">
+                    <span className="text-blue-500">📊</span>
+                    <span className="text-gray-700">Insert Statistics</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm">
+                    <span className="text-green-500">✏️</span>
+                    <span className="text-gray-700">Re-write</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm">
+                    <span className="text-purple-500">💡</span>
+                    <span className="text-gray-700">Add Example</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4">
+                <h4 className="font-semibold text-gray-700 mb-3">AI Suggestions</h4>
+                <div className="space-y-4">
+                  <div className="bg-gray-50 p-3 rounded-lg">
+                    <p className="text-sm font-medium text-gray-800 mb-2">Add Specific Dates for Milestones</p>
+                    <p className="text-xs text-gray-600 mb-3">Lorem ipsum dolor sit amet consectetur. Nunc potenti neque vitae sagittis ultrices. Enim platea tempus diam dictum. Id orci id non lectus etiam euismod proin. Cursus ut nam cras vitae.</p>
+                    <button className="w-full bg-gray-100 text-gray-700 py-2 px-3 rounded text-sm hover:bg-gray-200">
+                      Generate ✨
+                    </button>
+                  </div>
+                  
+                  <div className="bg-gray-50 p-3 rounded-lg">
+                    <p className="text-sm font-medium text-gray-800 mb-2">Add Specific Dates for Milestones</p>
+                    <p className="text-xs text-gray-600 mb-3">Lorem ipsum dolor sit amet consectetur. Nunc potenti neque vitae sagittis ultrices. Enim platea tempus diam dictum. Id orci id non lectus etiam euismod proin. Cursus ut nam cras vitae.</p>
+                    <button className="w-full bg-gray-100 text-gray-700 py-2 px-3 rounded text-sm hover:bg-gray-200">
+                      Generate ✨
+                    </button>
+                  </div>
+                  
+                  <div className="bg-gray-50 p-3 rounded-lg">
+                    <p className="text-sm font-medium text-gray-800 mb-2">Add Specific Dates for Milestones</p>
+                    <p className="text-xs text-gray-600 mb-3">Lorem ipsum dolor sit amet consectetur. Nunc potenti neque vitae sagittis ultrices. Enim platea tempus diam dictum. Id orci id non lectus etiam euismod proin. Cursus ut nam cras vitae.</p>
+                    <button className="w-full bg-gray-100 text-gray-700 py-2 px-3 rounded text-sm hover:bg-gray-200">
+                      Generate ✨
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -479,7 +642,7 @@ const AppShowcase = () => {
 
         {/* Horizontal Step Navigation */}
         <div className="flex justify-center mb-12">
-          <div className="bg-white rounded-2xl p-2 shadow-lg border border-gray-100 flex gap-2">
+          <div className="bg-white rounded-2xl p-2 shadow-lg border border-gray-100 flex gap-2 overflow-x-auto">
             {steps.map((step, index) => {
               const Icon = step.icon;
               const isActive = index === activeStep;
@@ -488,7 +651,7 @@ const AppShowcase = () => {
                 <button
                   key={step.id}
                   onClick={() => setActiveStep(index)}
-                  className={`flex items-center gap-3 px-6 py-4 rounded-xl transition-all duration-300 ${
+                  className={`flex items-center gap-3 px-6 py-4 rounded-xl transition-all duration-300 whitespace-nowrap ${
                     isActive 
                       ? 'bg-brand-primary-green text-white shadow-md' 
                       : 'text-gray-600 hover:bg-gray-50'
@@ -508,7 +671,7 @@ const AppShowcase = () => {
         </div>
 
         {/* Large Screen Display */}
-        <div className="relative max-w-6xl mx-auto">
+        <div className="relative max-w-7xl mx-auto">
           {/* Browser Frame */}
           <div className="bg-gray-100 rounded-t-xl p-4">
             <div className="flex items-center gap-2">
@@ -522,7 +685,7 @@ const AppShowcase = () => {
           </div>
           
           {/* App Content */}
-          <div className="bg-white rounded-b-xl shadow-2xl min-h-[700px] relative overflow-hidden">
+          <div className="bg-white rounded-b-xl shadow-2xl min-h-[800px] relative overflow-hidden">
             {steps.map((step, index) => (
               <div
                 key={step.id}
