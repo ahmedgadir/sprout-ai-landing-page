@@ -706,30 +706,8 @@ const AppShowcase = () => {
   }, [steps.length]);
 
   return (
-    <section className="py-16 bg-gradient-to-b from-white to-brand-light-green/20 relative">
-      {/* Background Testimonial */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="max-w-6xl mx-auto px-8 text-center">
-          <blockquote className="text-4xl lg:text-5xl font-medium text-gray-200 leading-relaxed mb-8">
-            "We've used FundSprout for far more than just grants. From grant reporting to startup accelerator applications, incubator programs, and customer pilot coordination—it's transformed our ability to quickly reformat and restate our value proposition to different audiences."
-          </blockquote>
-          <p className="text-2xl lg:text-3xl text-gray-300 mb-6">
-            For our largest application, a 90+ page federal grant, I'm not sure how we would have completed it without FundSprout's help. 
-            <span className="text-gray-200"> Our recent phase two application was accepted, and we're moving forward to the next stage!</span>
-          </p>
-          <div className="flex items-center justify-center gap-4">
-            <div className="w-16 h-16 bg-gray-300 rounded-full flex items-center justify-center text-gray-600 font-bold text-xl">
-              AA
-            </div>
-            <div className="text-left">
-              <div className="font-semibold text-gray-300 text-xl">Ahmed Ali</div>
-              <div className="text-gray-400 text-lg">CEO, Injaz Toronto</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section className="py-16 bg-gradient-to-b from-white to-brand-light-green/20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-dark-green mb-6">
             Watch How Easy Grant Success Can Be
@@ -737,6 +715,30 @@ const AppShowcase = () => {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             From discovery to reporting — FundSprout's comprehensive platform handles every step of your grant journey
           </p>
+        </div>
+
+        {/* Customer Testimonial */}
+        <div className="mb-16 max-w-6xl mx-auto">
+          <div className="bg-white rounded-2xl shadow-lg border border-brand-light-green/30 p-12 text-center">
+            <div className="mb-8">
+              <blockquote className="text-2xl lg:text-3xl text-gray-800 leading-relaxed font-medium mb-8">
+                "We've used FundSprout for far more than just grants. From grant reporting to startup accelerator applications, incubator programs, and customer pilot coordination—it's transformed our ability to quickly reformat and restate our value proposition to different audiences."
+              </blockquote>
+              <p className="text-xl text-gray-600 mb-4">
+                For our largest application, a 90+ page federal grant, I'm not sure how we would have completed it without FundSprout's help. 
+                <span className="text-gray-800 font-semibold"> Our recent phase two application was accepted, and we're moving forward to the next stage!</span>
+              </p>
+            </div>
+            <div className="flex items-center justify-center gap-4">
+              <div className="w-16 h-16 bg-gradient-to-br from-brand-primary-green to-brand-dark-green rounded-full flex items-center justify-center text-white font-bold text-xl">
+                AA
+              </div>
+              <div className="text-left">
+                <div className="font-semibold text-gray-900 text-lg">Ahmed Ali</div>
+                <div className="text-gray-600">CEO, Injaz Toronto</div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="flex justify-center mb-12">
