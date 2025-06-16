@@ -9,7 +9,7 @@ const AppShowcase = () => {
     {
       id: 1,
       title: "Discover Perfect Grants",
-      description: "AI-powered matching finds grants that fit your mission",
+      description: "AI-powered matching finds grants that fit your mission with 90%+ accuracy",
       icon: Search,
       highlight: "3 grants found matching your criteria",
       mockupContent: (
@@ -89,7 +89,7 @@ const AppShowcase = () => {
     {
       id: 2,
       title: "Get Detailed Insights",
-      description: "See compatibility scores and match analysis",
+      description: "See why each grant is a perfect match with AI-generated compatibility scores",
       icon: FileText,
       highlight: "92% fit • Excellent Match",
       mockupContent: (
@@ -223,7 +223,7 @@ const AppShowcase = () => {
     {
       id: 3,
       title: "Track Everything",
-      description: "Smart application management and progress tracking",
+      description: "Never miss a deadline with smart application management and progress tracking",
       icon: BarChart3,
       highlight: "5 applications • 2 urgent deadlines",
       mockupContent: (
@@ -384,7 +384,7 @@ const AppShowcase = () => {
     {
       id: 4,
       title: "AI-Powered Writing",
-      description: "Draft compelling proposals 10x faster",
+      description: "Draft compelling proposals 10x faster with intelligent writing assistance",
       icon: PenTool,
       highlight: "570/800 words • AI Suggestions",
       mockupContent: (
@@ -615,7 +615,7 @@ const AppShowcase = () => {
     {
       id: 5,
       title: "Manage Reports",
-      description: "Automated progress reports and milestone tracking",
+      description: "Stay compliant with automated progress reports and milestone tracking",
       icon: CheckCircle,
       highlight: "All reports up to date",
       mockupContent: (
@@ -727,17 +727,17 @@ const AppShowcase = () => {
                 <button
                   key={step.id}
                   onClick={() => setActiveStep(index)}
-                  className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 whitespace-nowrap min-w-fit ${
+                  className={`flex items-center gap-3 px-6 py-4 rounded-xl transition-all duration-300 whitespace-nowrap ${
                     isActive 
                       ? 'bg-brand-primary-green text-white shadow-md' 
                       : 'text-gray-600 hover:bg-gray-50'
                   }`}
                 >
-                  <Icon className="w-5 h-5 flex-shrink-0" />
+                  <Icon className="w-5 h-5" />
                   <div className="text-left">
-                    <div className="font-semibold text-sm leading-tight">{step.title}</div>
-                    <div className={`text-xs leading-tight ${isActive ? 'text-green-100' : 'text-gray-500'}`}>
-                      {step.description}
+                    <div className="font-semibold text-sm">{step.title}</div>
+                    <div className={`text-xs ${isActive ? 'text-green-100' : 'text-gray-500'}`}>
+                      Step {step.id}
                     </div>
                   </div>
                 </button>
