@@ -57,7 +57,7 @@ const AppShowcase = () => {
           
           <div className="max-w-4xl mx-auto">
             <p className="text-2xl font-light mb-8 leading-relaxed">
-              FundSprout completely changed how we approach grant funding. We went from spending weeks searching for opportunities to having perfect matches delivered to us instantly. Our success rate has tripled, and we've secured over $300K in funding this year alone.
+              Before FundSprout, our team spent countless hours searching through databases and crafting applications. Now, we have a streamlined process that matches us with the right opportunities and guides us through every step. It's been a total game-changer for our funding strategy.
             </p>
             
             <div className="flex items-center justify-center gap-4">
