@@ -16,7 +16,7 @@ const CallToAction = () => {
         <div className="text-center mb-8 sm:mb-16">
           <h2 className="text-2xl sm:text-3xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6">
             Ready to Transform Your
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-teal-700">
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-wise-bright-green to-wise-forest-green">
               Grant Success?
             </span>
           </h2>
@@ -30,7 +30,7 @@ const CallToAction = () => {
         <div className="max-w-3xl mx-auto">
           <div className="bg-white border border-gray-200 rounded-3xl p-6 sm:p-8 lg:p-10 hover:shadow-xl transition-all duration-300 group shadow-lg">
             <div className="text-center mb-8">
-              <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-105 transition-transform">
+              <div className="w-16 h-16 bg-wise-forest-green rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-105 transition-transform">
                 <Calendar className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">Request a Demo</h3>
@@ -79,7 +79,7 @@ const CallToAction = () => {
               </div>
             </div>
             
-            <button className="w-full bg-gradient-to-r from-teal-600 to-teal-700 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-teal-700 hover:to-teal-800 transition-all flex items-center justify-center gap-3 group shadow-lg hover:shadow-xl">
+            <button className="w-full bg-wise-forest-green hover:bg-wise-bright-green text-white hover:text-wise-forest-green px-8 py-4 rounded-xl font-semibold text-lg transition-all flex items-center justify-center gap-3 group shadow-lg hover:shadow-xl">
               Schedule Your Demo
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>

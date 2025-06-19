@@ -29,7 +29,7 @@ const UnificationSection = () => {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-20">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-teal-50 text-teal-700 text-sm font-semibold mb-4 sm:mb-6">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-wise-background-neutral text-wise-forest-green text-sm font-semibold mb-4 sm:mb-6">
             <Zap className="w-4 h-4 mr-2" />
             The Transformation
           </div>
@@ -88,8 +88,8 @@ const UnificationSection = () => {
 
             {/* Transformation Arrow */}
             <div className="flex justify-center lg:absolute lg:left-1/2 lg:top-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 lg:z-10 order-2 lg:order-none">
-              <div className="bg-white rounded-full p-2 shadow-lg border-2 border-teal-500 lg:rotate-0 rotate-90">
-                <ArrowRight className="w-4 h-4 text-teal-600" />
+                          <div className="bg-white rounded-full p-2 shadow-lg border-2 border-wise-bright-green lg:rotate-0 rotate-90">
+              <ArrowRight className="w-4 h-4 text-wise-bright-green" />
               </div>
             </div>
 
@@ -105,13 +105,13 @@ const UnificationSection = () => {
               </div>
 
               {/* Unified Platform */}
-              <div className="bg-gradient-to-br from-teal-500 to-teal-600 rounded-xl p-6 text-white shadow-lg flex-grow flex flex-col justify-center">
+              <div className="bg-wise-forest-green rounded-xl p-6 text-white shadow-lg flex-grow flex flex-col justify-center">
                 <div className="text-center mb-6">
                   <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
                     <Zap className="w-6 h-6 text-white" />
                   </div>
                   <h4 className="text-lg font-bold mb-1">FundSprout AI</h4>
-                  <p className="text-teal-100 text-sm">One platform for everything</p>
+                  <p className="text-white/90 text-sm">One platform for everything</p>
                 </div>
 
                 <div className="grid grid-cols-2 gap-2">

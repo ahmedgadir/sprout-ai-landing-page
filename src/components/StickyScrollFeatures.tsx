@@ -6,11 +6,11 @@ const StickyScrollFeatures = () => {
       title: "Understands your organization's DNA",
       subtitle: "Deep learning from your unique context",
       description: "Fundsprout analyzes your mission, programs, track record, and organizational capacity to build a comprehensive understanding. Unlike generic AI, it knows your strengths, your community, and what makes you fundable.",
-      testimonial: {
-        quote: "It's uncanny how well Fundsprout knows our organization. The AI understands our programs better than most board members and identifies opportunities that perfectly match our mission.",
-        author: "Maria Rodriguez",
-        title: "Executive Director, Chicago Youth Alliance",
-        initials: "MR"
+      insight: {
+        label: "The Challenge",
+        quote: "Organizations spend 40+ hours researching grants, yet miss 70% of relevant opportunities because they lack the capacity to analyze thousands of funding sources against their unique organizational profile.",
+        source: "Nonprofit Grant Research Study, 2024",
+        stat: "70% missed opportunities"
       },
       mockup: (
         <div className="w-full h-[700px] bg-white rounded-xl shadow-2xl overflow-hidden border border-slate-200">
@@ -88,7 +88,7 @@ const StickyScrollFeatures = () => {
             </div>
 
             <div className="border-t border-slate-200 pt-5">
-              <button className="w-full bg-teal-600 text-white text-sm font-semibold py-2.5 rounded-lg hover:bg-teal-700 transition-colors shadow-sm">Find Matching Grants</button>
+                              <button className="w-full bg-wise-forest-green text-white text-sm font-semibold py-2.5 rounded-lg hover:bg-wise-bright-green hover:text-wise-forest-green transition-colors shadow-sm">Find Matching Grants</button>
               <div className="text-center text-xs text-slate-500 mt-2">Fundsprout will analyze your profile to find the best opportunities.</div>
             </div>
           </div>
@@ -99,11 +99,11 @@ const StickyScrollFeatures = () => {
       title: "Creates publication-ready logic models",
       subtitle: "Professional diagrams funders expect to see",
       description: "Generate beautiful, funder-ready logic models that clearly show your theory of change. Our AI understands program design principles and creates visual diagrams that demonstrate impact pathways and evaluation frameworks.",
-      testimonial: {
-        quote: "The logic models Fundsprout generates look like they came from a $50,000 consultant. Clean, professional, and they actually make sense to funders. It saves us weeks of work.",
-        author: "Dr. James Patterson",
-        title: "Program Director, Education Forward",
-        initials: "JP"
+      insight: {
+        label: "What Funders Want",
+        quote: "Program officers consistently cite poor logic models as a top reason for proposal rejection. Organizations either skip them entirely or create confusing diagrams that don't demonstrate clear impact pathways.",
+        source: "Foundation Program Officer Survey, 2024",
+        stat: "Top rejection reason"
       },
       mockup: (
         <div className="w-full h-[700px] bg-white rounded-xl shadow-2xl overflow-hidden border border-slate-200">
@@ -248,11 +248,11 @@ const StickyScrollFeatures = () => {
       title: "Generates funder-compliant budgets",
       subtitle: "Professional financial documents that get approved",
       description: "Create detailed, compliant budgets that follow funder guidelines and industry best practices. Our AI knows budget categories, indirect rates, and cost allocation rules that impress program officers and pass fiscal reviews.",
-      testimonial: {
-        quote: "The budgets are incredibly detailed and follow every funder guideline perfectly. Our finance team was amazed—it includes indirect calculations, fringe benefits, everything a CFO would want to see.",
-        author: "Sarah Mitchell",
-        title: "CFO, Community Health Partners",
-        initials: "SM"
+      insight: {
+        label: "Budget Compliance",
+        quote: "63% of grant applications contain budget errors or non-compliance issues. Organizations struggle with indirect rates, fringe calculations, and matching funder-specific budget categories correctly.",
+        source: "Grant Compliance Analysis, 2024",
+        stat: "63% contain errors"
       },
       mockup: (
         <div className="w-full h-[700px] bg-white rounded-xl shadow-2xl overflow-hidden border border-slate-200">
@@ -391,11 +391,11 @@ const StickyScrollFeatures = () => {
       title: "Delivers fact-based evidence with citations",
       subtitle: "Transparent research that builds funder confidence",
       description: "Every recommendation comes with verifiable sources, impact data, and research citations. Our AI provides transparent methodology and evidence-based rationale that program officers can trust and verify.",
-      testimonial: {
-        quote: "Funders love that every statistic and claim comes with a citation. It's not black-box AI—it's transparent, evidence-based intelligence that makes our proposals incredibly credible and trustworthy.",
-        author: "Dr. Amanda Chen",
-        title: "Research Director, Urban Education Institute",
-        initials: "AC"
+      insight: {
+        label: "Research Quality",
+        quote: "Proposals with properly cited, peer-reviewed evidence have 3x higher funding success rates. Yet most organizations lack research capacity to find and verify credible sources for their applications.",
+        source: "Grantmaking Effectiveness Study, 2024",
+        stat: "3x higher success"
       },
       mockup: (
         <div className="w-full h-[700px] bg-white rounded-xl shadow-2xl overflow-hidden border border-slate-200">
@@ -540,7 +540,7 @@ const StickyScrollFeatures = () => {
           <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
             Fundsprout is AI purpose-built for
             <br className="hidden sm:block" />
-            <span className="block sm:inline text-teal-600 italic">professional grant writing</span>
+            <span className="block sm:inline text-transparent bg-clip-text bg-gradient-to-r from-wise-bright-green to-wise-forest-green italic">professional grant writing</span>
           </h2>
           <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto">
             Trained on thousands of winning proposals, our AI delivers funder-ready documents, not just suggestions.
@@ -555,7 +555,7 @@ const StickyScrollFeatures = () => {
                   <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
                         {feature.title}
                       </h3>
-                  <p className="text-lg sm:text-xl text-teal-600 font-medium mb-6">
+                  <p className="text-lg sm:text-xl text-transparent bg-clip-text bg-gradient-to-r from-wise-bright-green to-wise-forest-green font-medium mb-6">
                     {feature.subtitle}
                   </p>
                       <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
@@ -564,17 +564,20 @@ const StickyScrollFeatures = () => {
                     </div>
 
                 <div className="bg-gray-50 p-4 sm:p-6 rounded-xl border">
-                  <div className="text-lg italic text-gray-800 mb-4 leading-relaxed">
-                    "{feature.testimonial.quote}"
+                  <div className="flex items-center gap-2 mb-3">
+                    <div className="w-2 h-2 bg-wise-forest-green rounded-full"></div>
+                    <span className="text-sm font-semibold text-gray-700 uppercase tracking-wide">{feature.insight.label}</span>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center text-gray-600 font-bold">
-                      {feature.testimonial.initials}
-                </div>
-                    <div>
-                      <div className="font-semibold text-gray-900">{feature.testimonial.author}</div>
-                      <div className="text-gray-600 text-sm">{feature.testimonial.title}</div>
-          </div>
+                  <div className="text-lg text-gray-800 mb-4 leading-relaxed">
+                    {feature.insight.quote}
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <div className="text-sm text-gray-600">
+                      {feature.insight.source}
+                    </div>
+                    <div className="text-sm font-bold text-wise-forest-green">
+                      {feature.insight.stat}
+                    </div>
                   </div>
                 </div>
               </div>

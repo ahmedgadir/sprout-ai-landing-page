@@ -945,15 +945,15 @@ const AppShowcase = () => {
   }, [valuePropCopy.length]);
 
   return (
-    <section id="demo" className="py-12 sm:py-16 bg-gradient-to-b from-white to-brand-light-green/20">
+          <section id="demo" className="py-12 sm:py-16 bg-gradient-to-b from-white to-wise-background-neutral">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 sm:mb-12">
-          <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-brand-dark-green mb-4 sm:mb-6">
+                      <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-wise-forest-green mb-4 sm:mb-6">
             Watch How Easy Grant Success Can Be
           </h2>
           <div className="min-h-[40px] sm:min-h-[60px] flex items-center justify-center">
             <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-5xl mx-auto leading-relaxed transition-all duration-500">
-              <span className="font-semibold text-brand-dark-green">{valuePropCopy[activeValueProp].audience}</span>{" "}
+              <span className="font-semibold text-wise-forest-green">{valuePropCopy[activeValueProp].audience}</span>{" "}
               {valuePropCopy[activeValueProp].copy}
             </p>
           </div>
@@ -961,18 +961,18 @@ const AppShowcase = () => {
 
         {/* Key Metrics */}
         <div className="grid grid-cols-3 gap-4 sm:gap-8 mb-8 sm:mb-16 max-w-4xl mx-auto">
-          <div className="text-center">
-            <div className="text-xl sm:text-3xl font-bold text-brand-primary-green mb-1 sm:mb-2">10x</div>
-            <div className="text-gray-600 text-xs sm:text-base">Faster proposal writing</div>
-          </div>
-          <div className="text-center">
-            <div className="text-xl sm:text-3xl font-bold text-brand-primary-green mb-1 sm:mb-2">90%+</div>
-            <div className="text-gray-600 text-xs sm:text-base">Grant matching accuracy</div>
-          </div>
-          <div className="text-center">
-            <div className="text-xl sm:text-3xl font-bold text-brand-primary-green mb-1 sm:mb-2">15hr</div>
-            <div className="text-gray-600 text-xs sm:text-base">Weekly time savings</div>
-          </div>
+                      <div className="text-center">
+              <div className="text-xl sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-wise-bright-green to-wise-forest-green mb-1 sm:mb-2">10x</div>
+              <div className="text-gray-600 text-xs sm:text-base">Faster proposal writing</div>
+            </div>
+            <div className="text-center">
+              <div className="text-xl sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-wise-bright-green to-wise-forest-green mb-1 sm:mb-2">90%+</div>
+              <div className="text-gray-600 text-xs sm:text-base">Grant matching accuracy</div>
+            </div>
+            <div className="text-center">
+              <div className="text-xl sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-wise-bright-green to-wise-forest-green mb-1 sm:mb-2">15hr</div>
+              <div className="text-gray-600 text-xs sm:text-base">Weekly time savings</div>
+            </div>
         </div>
 
         <div className="flex justify-center mb-6 sm:mb-12">
@@ -987,7 +987,7 @@ const AppShowcase = () => {
                   onClick={() => setActiveStep(index)}
                   className={`flex items-center gap-2 sm:gap-3 px-3 sm:px-6 py-2 sm:py-4 rounded-xl transition-all duration-300 whitespace-nowrap ${
                     isActive 
-                      ? 'bg-brand-primary-green text-white shadow-md' 
+                      ? 'bg-wise-forest-green text-white shadow-md' 
                       : 'text-gray-600 hover:bg-gray-50'
                   }`}
                 >
@@ -1044,25 +1044,25 @@ const AppShowcase = () => {
 
         {/* Enhanced Customer Testimonial */}
         <div className="mt-20 max-w-5xl mx-auto">
-          <div className="relative bg-gradient-to-br from-brand-light-green/10 to-white border border-brand-light-green/20 rounded-3xl p-8 sm:p-12">
+                      <div className="relative bg-gradient-to-br from-wise-background-neutral to-white border border-wise-border-neutral rounded-3xl p-8 sm:p-12">
             {/* Large Quote Mark */}
-            <div className="absolute top-6 left-8 text-6xl text-brand-primary-green/20 font-serif leading-none">"</div>
+                          <div className="absolute top-6 left-8 text-6xl text-wise-bright-green/20 font-serif leading-none">"</div>
             
             <div className="relative">
               {/* Testimonial Text */}
               <blockquote className="text-xl sm:text-2xl text-gray-800 leading-relaxed font-medium mb-8 pl-8">
-                We've been beta testing FundSprout for the past few months, and <span className="text-brand-dark-green font-semibold">it's already transformed how we approach grant applications</span>. The AI matching helped us <span className="bg-brand-light-green/30 px-1 rounded">discover funding opportunities we would have never found otherwise</span>, and the writing assistance made our proposals <span className="text-brand-dark-green font-semibold">much more compelling</span>. We're still in the early stages with the platform, but we're already seeing <span className="bg-brand-light-green/30 px-1 rounded">promising results in our grant research and application process</span>.
+                We've been beta testing Fundsprout for the past few months, and <span className="text-wise-forest-green font-semibold">it's already transformed how we approach grant applications</span>. The AI matching helped us <span className="bg-wise-background-neutral px-1 rounded">discover funding opportunities we would have never found otherwise</span>, and the writing assistance made our proposals <span className="text-wise-forest-green font-semibold">much more compelling</span>. We're still in the early stages with the platform, but we're already seeing <span className="bg-wise-background-neutral px-1 rounded">promising results in our grant research and application process</span>.
               </blockquote>
               
               {/* Author Info */}
               <div className="pl-8">
                 <div className="font-bold text-gray-900 text-lg">Ahmed Ali</div>
-                <div className="text-brand-primary-green font-medium">CEO, Injaz Toronto</div>
+                                  <div className="text-transparent bg-clip-text bg-gradient-to-r from-wise-bright-green to-wise-forest-green font-medium">CEO, Injaz Toronto</div>
               </div>
             </div>
             
             {/* Decorative Element */}
-            <div className="absolute bottom-6 right-8 text-6xl text-brand-primary-green/20 font-serif leading-none rotate-180">"</div>
+                          <div className="absolute bottom-6 right-8 text-6xl text-wise-bright-green/20 font-serif leading-none rotate-180">"</div>
           </div>
         </div>
 

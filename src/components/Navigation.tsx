@@ -22,20 +22,20 @@ const Navigation = () => {
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#demo" className="text-gray-700 hover:text-brand-primary-green transition-colors font-medium">
+            <a href="#demo" className="text-gray-700 hover:text-wise-forest-green transition-colors font-medium">
               Features
             </a>
-            <a href="#why-fundsprout" className="text-gray-700 hover:text-brand-primary-green transition-colors font-medium">
+            <a href="#why-fundsprout" className="text-gray-700 hover:text-wise-forest-green transition-colors font-medium">
               Why Fundsprout
             </a>
-            <a href="#fundsprout-solution" className="text-gray-700 hover:text-brand-primary-green transition-colors font-medium">
+            <a href="#fundsprout-solution" className="text-gray-700 hover:text-wise-forest-green transition-colors font-medium">
               The Fundsprout Solution
             </a>
           </div>
 
           {/* Desktop CTA Button */}
           <Button 
-            className="hidden md:block bg-brand-primary-green hover:bg-brand-dark-green text-white font-medium px-6 py-2 transition-all duration-200 hover:scale-105"
+            className="hidden md:block bg-wise-forest-green hover:bg-wise-bright-green text-white hover:text-wise-forest-green font-medium px-6 py-2 transition-all duration-200 hover:scale-105"
             onClick={() => handleNavClick('request-demo')}
           >
             Request Demo
@@ -43,7 +43,7 @@ const Navigation = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 rounded-md text-gray-700 hover:text-brand-primary-green"
+            className="md:hidden p-2 rounded-md text-gray-700 hover:text-wise-forest-green"
             onClick={toggleMenu}
           >
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -56,28 +56,28 @@ const Navigation = () => {
             <div className="px-2 pt-2 pb-3 space-y-1">
               <a
                 href="#demo"
-                className="block px-3 py-2 text-gray-700 hover:text-brand-primary-green font-medium"
+                className="block px-3 py-2 text-gray-700 hover:text-wise-forest-green font-medium"
                 onClick={() => handleNavClick('demo')}
               >
                 Features
               </a>
               <a
                 href="#why-fundsprout"
-                className="block px-3 py-2 text-gray-700 hover:text-brand-primary-green font-medium"
+                className="block px-3 py-2 text-gray-700 hover:text-wise-forest-green font-medium"
                 onClick={() => handleNavClick('why-fundsprout')}
               >
                 Why Fundsprout
               </a>
               <a
                 href="#fundsprout-solution"
-                className="block px-3 py-2 text-gray-700 hover:text-brand-primary-green font-medium"
+                className="block px-3 py-2 text-gray-700 hover:text-wise-forest-green font-medium"
                 onClick={() => handleNavClick('fundsprout-solution')}
               >
                 The Fundsprout Solution
               </a>
               <div className="pt-2">
                 <Button 
-                  className="w-full bg-brand-primary-green hover:bg-brand-dark-green text-white font-medium py-2"
+                  className="w-full bg-wise-forest-green hover:bg-wise-bright-green text-white hover:text-wise-forest-green font-medium py-2"
                   onClick={() => handleNavClick('request-demo')}
                 >
                   Request Demo
