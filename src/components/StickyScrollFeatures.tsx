@@ -1,597 +1,344 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
+import { Button } from '@/components/ui/button';
+import { ArrowRight, Brain, Users, FileSearch, Calculator, Play, Pause, ChevronRight, PenTool, Target } from 'lucide-react';
 
 const StickyScrollFeatures = () => {
+  const [activeFeature, setActiveFeature] = useState(0);
+  const [isAutoPlay, setIsAutoPlay] = useState(true);
+
   const features = [
     {
-      title: "Understands your organization's DNA",
-      subtitle: "Deep learning from your unique context",
-      description: "Fundsprout analyzes your mission, programs, track record, and organizational capacity to build a comprehensive understanding. Unlike generic AI, it knows your strengths, your community, and what makes you fundable.",
-      insight: {
-        label: "The Challenge",
-        quote: "Organizations spend 40+ hours researching grants, yet miss 70% of relevant opportunities because they lack the capacity to analyze thousands of funding sources against their unique organizational profile.",
-        source: "Nonprofit Grant Research Study, 2024",
-        stat: "70% missed opportunities"
-      },
-      mockup: (
-        <div className="w-full h-[700px] bg-white rounded-xl shadow-2xl overflow-hidden border border-slate-200">
-          {/* Clean minimal header */}
-          <div className="bg-slate-50 border-b border-slate-200 px-6 py-3 flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="w-6 h-6 bg-teal-500 rounded-md flex items-center justify-center">
-                <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 4h5m-5 4h5m-5-8h5"></path></svg>
-              </div>
-              <span className="text-sm font-medium text-slate-700">Organization Intelligence</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-              <span className="text-xs text-slate-500">Profile Synced</span>
-            </div>
-          </div>
-          
-          <div className="p-6 space-y-6">
-            {/* Profile Strength & Sources */}
-            <div className="grid grid-cols-2 gap-6">
-              <div className="text-center">
-                <div className="inline-block relative">
-                  <svg className="w-32 h-32">
-                    <circle className="text-slate-200" strokeWidth="10" stroke="currentColor" fill="transparent" r="52" cx="64" cy="64" />
-                    <circle className="text-teal-500" strokeWidth="10" stroke="currentColor" fill="transparent" r="52" cx="64" cy="64" style={{ strokeDasharray: 326.56, strokeDashoffset: 326.56 * (1 - 0.98) }} transform="rotate(-90 64 64)" />
-                  </svg>
-                  <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
-                    <span className="text-4xl font-bold text-slate-900">98%</span>
-                  </div>
-                </div>
-                <div className="text-base font-semibold text-slate-900 mt-2">Profile Strength</div>
-                <div className="text-xs text-slate-500">Ready for grant matching</div>
-              </div>
-              
-              <div>
-                <h3 className="text-sm font-semibold text-slate-900 mb-3">Analyzed Sources (17 total)</h3>
-                <div className="space-y-2">
-                  <div className="flex items-center gap-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
-                    <span className="text-xs font-medium text-slate-700 truncate">Annual Report 2023.pdf</span>
-                    <span className="text-xs text-slate-400 ml-auto">Synced</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
-                    <span className="text-xs font-medium text-slate-700 truncate">Strategic Plan.docx</span>
-                    <span className="text-xs text-slate-400 ml-auto">Synced</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9V3m-9 9h18" /></svg>
-                    <span className="text-xs font-medium text-slate-700 truncate">chicago-youth-alliance.org</span>
-                    <span className="text-xs text-slate-400 ml-auto">Synced</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
-                    <span className="text-xs font-medium text-slate-700 truncate">Program Metrics.xlsx</span>
-                    <span className="text-xs text-slate-400 ml-auto">Synced</span>
-                  </div>
-                  <div className="text-xs text-slate-500 pt-1 border-t border-slate-200">... and 13 other documents</div>
-                </div>
-              </div>
-            </div>
-            
-            {/* AI Extracted Concepts */}
-            <div>
-              <h3 className="text-sm font-semibold text-slate-900 mb-3">AI-Extracted Core Concepts</h3>
-              <div className="flex flex-wrap gap-2">
-                <span className="bg-teal-100 text-teal-800 text-xs font-medium px-2.5 py-1 rounded-full">Youth Development</span>
-                <span className="bg-sky-100 text-sky-800 text-xs font-medium px-2.5 py-1 rounded-full">STEM Education</span>
-                <span className="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-1 rounded-full">Workforce Prep</span>
-                <span className="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-1 rounded-full">Community Engagement</span>
-                <span className="bg-pink-100 text-pink-800 text-xs font-medium px-2.5 py-1 rounded-full">Bilingual Services</span>
-                <span className="bg-rose-100 text-rose-800 text-xs font-medium px-2.5 py-1 rounded-full">Mental Health Support</span>
-                <span className="bg-amber-100 text-amber-800 text-xs font-medium px-2.5 py-1 rounded-full">Parent Engagement</span>
-              </div>
-            </div>
-
-            <div className="border-t border-slate-200 pt-5">
-                              <button className="w-full bg-wise-forest-green text-white text-sm font-semibold py-2.5 rounded-lg hover:bg-wise-bright-green hover:text-wise-forest-green transition-colors shadow-sm">Find Matching Grants</button>
-              <div className="text-center text-xs text-slate-500 mt-2">Fundsprout will analyze your profile to find the best opportunities.</div>
-            </div>
-          </div>
-        </div>
-      )
+      id: 1,
+      title: "Personalized AI Knowledge",
+      subtitle: "AI that truly understands your organization",
+      description: "Our AI learns about your organization, programs, and impact areas to provide personalized recommendations. It knows your mission, history, and strengths better than most team members.",
+      icon: Target,
+      image: "/feature_images/KnowsAboutYou.png",
+      color: "teal",
+      gradient: "from-teal-600 to-cyan-600",
+      stats: "Learns continuously",
+      benefits: [
+        "Organization-specific insights",
+        "Mission-aligned opportunities",
+        "Historical performance analysis",
+        "Personalized writing suggestions"
+      ]
     },
     {
-      title: "Creates publication-ready logic models",
-      subtitle: "Professional diagrams funders expect to see",
-      description: "Generate beautiful, funder-ready logic models that clearly show your theory of change. Our AI understands program design principles and creates visual diagrams that demonstrate impact pathways and evaluation frameworks.",
-      insight: {
-        label: "What Funders Want",
-        quote: "Program officers consistently cite poor logic models as a top reason for proposal rejection. Organizations either skip them entirely or create confusing diagrams that don't demonstrate clear impact pathways.",
-        source: "Foundation Program Officer Survey, 2024",
-        stat: "Top rejection reason"
-      },
-      mockup: (
-        <div className="w-full h-[700px] bg-white rounded-xl shadow-2xl overflow-hidden border border-slate-200">
-          {/* Professional header */}
-          <div className="bg-slate-50 border-b border-slate-200 px-6 py-3 flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="w-6 h-6 bg-blue-500 rounded-md flex items-center justify-center">
-                <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                </svg>
-              </div>
-              <span className="text-sm font-medium text-slate-700">Logic Model Builder</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-              <span className="text-xs text-slate-500">Theory Validated</span>
-            </div>
-          </div>
-          
-          <div className="p-6 space-y-4">
-            {/* Project Header */}
-            <div className="flex items-center justify-between">
-              <h3 className="text-lg font-semibold text-slate-900">Youth STEM Leadership Program</h3>
-              <div className="text-xs text-slate-500 bg-slate-100 px-2 py-1 rounded">2-Year Model</div>
-            </div>
-            
-            {/* Flow Chart */}
-            <div className="space-y-3">
-              {/* Inputs */}
-              <div className="bg-purple-50 border border-purple-200 rounded-lg p-3">
-                <div className="text-center text-xs font-semibold text-purple-800 mb-2 uppercase tracking-wide">Inputs</div>
-                <div className="grid grid-cols-4 gap-2">
-                  <div className="text-center">
-                    <div className="text-sm font-bold text-slate-900">3.5 FTE</div>
-                    <div className="text-xs text-slate-600">Staff</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-sm font-bold text-slate-900">$275K</div>
-                    <div className="text-xs text-slate-600">Funding</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-sm font-bold text-slate-900">5</div>
-                    <div className="text-xs text-slate-600">Partners</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-sm font-bold text-slate-900">2</div>
-                    <div className="text-xs text-slate-600">Facilities</div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Flow Arrow */}
-              <div className="flex justify-center">
-                <div className="text-slate-400">↓</div>
-              </div>
-
-              {/* Activities */}
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-3">
-                <div className="text-center text-xs font-semibold text-blue-800 mb-2 uppercase tracking-wide">Activities</div>
-                <div className="grid grid-cols-2 gap-3">
-                  <div className="text-xs">
-                    <div className="font-medium text-slate-900">• Weekly hands-on sessions</div>
-                    <div className="font-medium text-slate-900">• Industry mentorship</div>
-                  </div>
-                  <div className="text-xs">
-                    <div className="font-medium text-slate-900">• Real-world projects</div>
-                    <div className="font-medium text-slate-900">• Leadership development</div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Flow Arrow */}
-              <div className="flex justify-center">
-                <div className="text-slate-400">↓</div>
-              </div>
-
-              {/* Outputs */}
-              <div className="bg-green-50 border border-green-200 rounded-lg p-3">
-                <div className="text-center text-xs font-semibold text-green-800 mb-2 uppercase tracking-wide">Outputs</div>
-                <div className="grid grid-cols-4 gap-2">
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-green-600">120</div>
-                    <div className="text-xs text-slate-600">Students</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-green-600">1,440</div>
-                    <div className="text-xs text-slate-600">Hours</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-green-600">24</div>
-                    <div className="text-xs text-slate-600">Projects</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-green-600">95%</div>
-                    <div className="text-xs text-slate-600">Completion</div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Flow Arrow */}
-              <div className="flex justify-center">
-                <div className="text-slate-400">↓</div>
-              </div>
-
-              {/* Outcomes & Impact */}
-              <div className="grid grid-cols-2 gap-3">
-                <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-3">
-                  <div className="text-center text-xs font-semibold text-yellow-800 mb-2 uppercase tracking-wide">Short-term</div>
-                  <div className="space-y-1 text-xs">
-                    <div className="text-slate-700">↗ STEM confidence</div>
-                    <div className="text-slate-700">↗ Leadership skills</div>
-                    <div className="text-slate-700">↗ Industry connections</div>
-                  </div>
-                </div>
-                
-                <div className="bg-orange-50 border border-orange-200 rounded-lg p-3">
-                  <div className="text-center text-xs font-semibold text-orange-800 mb-2 uppercase tracking-wide">Long-term</div>
-                  <div className="space-y-1 text-xs">
-                    <div className="text-slate-700">↗ STEM careers</div>
-                    <div className="text-slate-700">↗ Community leadership</div>
-                    <div className="text-slate-700">↗ Economic mobility</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Key Assumptions */}
-            <div className="bg-slate-50 rounded-lg p-3 border border-slate-200">
-              <div className="text-sm font-semibold text-slate-900 mb-2">Key Assumptions</div>
-              <div className="grid grid-cols-2 gap-3 text-xs text-slate-600">
-                <div>• High-quality mentors available</div>
-                <div>• Student commitment maintained</div>
-                <div>• Industry partnerships sustained</div>
-                <div>• Family support secured</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )
+      id: 2,
+      title: "Smart Research & Citations",
+      subtitle: "Evidence-based writing with automatic citations",
+      description: "Access millions of credible research sources and generate properly formatted citations automatically. Strengthen your proposals with compelling statistics and evidence that funders trust.",
+      icon: FileSearch,
+      image: "/feature_images/Citations.png",
+      color: "green",
+      gradient: "from-green-600 to-emerald-600", 
+      stats: "1M+ research sources",
+      benefits: [
+        "Automatic citation formatting",
+        "Real-time fact verification", 
+        "Credible source recommendations",
+        "Impact statistics integration"
+      ]
     },
     {
-      title: "Generates funder-compliant budgets",
-      subtitle: "Professional financial documents that get approved",
-      description: "Create detailed, compliant budgets that follow funder guidelines and industry best practices. Our AI knows budget categories, indirect rates, and cost allocation rules that impress program officers and pass fiscal reviews.",
-      insight: {
-        label: "Budget Compliance",
-        quote: "63% of grant applications contain budget errors or non-compliance issues. Organizations struggle with indirect rates, fringe calculations, and matching funder-specific budget categories correctly.",
-        source: "Grant Compliance Analysis, 2024",
-        stat: "63% contain errors"
-      },
-      mockup: (
-        <div className="w-full h-[700px] bg-white rounded-xl shadow-2xl overflow-hidden border border-slate-200">
-          {/* Professional header */}
-          <div className="bg-slate-50 border-b border-slate-200 px-6 py-3 flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="w-6 h-6 bg-emerald-500 rounded-md flex items-center justify-center">
-                <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <span className="text-sm font-medium text-slate-700">Budget Builder</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-              <span className="text-xs text-slate-500">Compliant</span>
-            </div>
-          </div>
-          
-          <div className="p-6 space-y-4">
-            {/* Project Header */}
-            <div className="text-center border-b border-slate-200 pb-3">
-              <h3 className="text-lg font-semibold text-slate-900">Youth STEM Leadership Program</h3>
-              <div className="text-sm text-slate-600 mt-1">January 2025 - December 2026 • 24-Month Grant</div>
-            </div>
-            
-            {/* Budget Overview */}
-            <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
-              <div className="grid grid-cols-3 gap-4 text-center">
-                <div>
-                  <div className="text-2xl font-bold text-slate-900">$405K</div>
-                  <div className="text-xs text-slate-500 uppercase tracking-wide">Total Request</div>
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-slate-900">67%</div>
-                  <div className="text-xs text-slate-500 uppercase tracking-wide">Personnel</div>
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-slate-900">10%</div>
-                  <div className="text-xs text-slate-500 uppercase tracking-wide">Indirect Rate</div>
-                </div>
-              </div>
-            </div>
-
-            {/* Budget Categories */}
-            <div className="space-y-3">
-              {/* Personnel */}
-              <div className="border border-slate-200 rounded-lg overflow-hidden">
-                <div className="bg-blue-50 border-b border-slate-200 px-3 py-2 flex items-center justify-between">
-                  <span className="text-sm font-semibold text-slate-900">Personnel</span>
-                  <span className="text-sm font-bold text-slate-900">$272,250</span>
-                </div>
-                <div className="p-3 space-y-2">
-                  <div className="flex justify-between items-center text-xs">
-                    <span className="text-slate-600">Program Director (0.75 FTE)</span>
-                    <span className="font-medium">$63,750</span>
-                  </div>
-                  <div className="flex justify-between items-center text-xs">
-                    <span className="text-slate-600">STEM Educators (1.5 FTE)</span>
-                    <span className="font-medium">$97,500</span>
-                  </div>
-                  <div className="flex justify-between items-center text-xs">
-                    <span className="text-slate-600">Youth Coordinator (1.0 FTE)</span>
-                    <span className="font-medium">$45,000</span>
-                  </div>
-                  <div className="flex justify-between items-center text-xs border-t border-slate-200 pt-2">
-                    <span className="text-slate-600">Fringe Benefits (32%)</span>
-                    <span className="font-medium">$66,000</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Program Expenses */}
-              <div className="border border-slate-200 rounded-lg overflow-hidden">
-                <div className="bg-green-50 border-b border-slate-200 px-3 py-2 flex items-center justify-between">
-                  <span className="text-sm font-semibold text-slate-900">Program Expenses</span>
-                  <span className="text-sm font-bold text-slate-900">$99,000</span>
-                </div>
-                <div className="p-3 space-y-2">
-                  <div className="flex justify-between items-center text-xs">
-                    <span className="text-slate-600">Equipment & Technology</span>
-                    <span className="font-medium">$45,000</span>
-                  </div>
-                  <div className="flex justify-between items-center text-xs">
-                    <span className="text-slate-600">Materials & Supplies</span>
-                    <span className="font-medium">$18,500</span>
-                  </div>
-                  <div className="flex justify-between items-center text-xs">
-                    <span className="text-slate-600">Transportation</span>
-                    <span className="font-medium">$12,000</span>
-                  </div>
-                  <div className="flex justify-between items-center text-xs">
-                    <span className="text-slate-600">Professional Development</span>
-                    <span className="font-medium">$8,500</span>
-                  </div>
-                  <div className="flex justify-between items-center text-xs">
-                    <span className="text-slate-600">Program Evaluation</span>
-                    <span className="font-medium">$15,000</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Administrative */}
-              <div className="border border-slate-200 rounded-lg overflow-hidden">
-                <div className="bg-purple-50 border-b border-slate-200 px-3 py-2 flex items-center justify-between">
-                  <span className="text-sm font-semibold text-slate-900">Administrative</span>
-                  <span className="text-sm font-bold text-slate-900">$34,125</span>
-                </div>
-                <div className="p-3">
-                  <div className="flex justify-between items-center text-xs">
-                    <span className="text-slate-600">Indirect Costs (10% de minimis)</span>
-                    <span className="font-medium">$34,125</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Total & Compliance */}
-            <div className="bg-gradient-to-r from-emerald-50 to-teal-50 border border-emerald-200 rounded-lg p-4">
-              <div className="text-center">
-                <div className="text-lg font-bold text-slate-900 mb-1">Total Project Budget</div>
-                <div className="text-3xl font-bold text-emerald-600">$405,375</div>
-                <div className="text-xs text-slate-500 mt-2 flex items-center justify-center gap-2">
-                  <svg className="w-3 h-3 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  Federal guidelines compliant
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )
+      id: 3,
+      title: "AI Enhanced Writing Assistant",
+      subtitle: "Professional grant writing that impresses funders",
+      description: "Transform your ideas into compelling, funder-ready narratives. Our AI helps craft persuasive proposals with proper structure, tone, and language that resonates with grant reviewers.",
+      icon: PenTool,
+      image: "/feature_images/AI Enhanced Writing.png",
+      color: "blue",
+      gradient: "from-blue-600 to-indigo-600",
+      stats: "98% approval rate",
+      benefits: [
+        "AI-powered narrative development",
+        "Funder-specific tone adaptation", 
+        "Real-time writing suggestions",
+        "Professional formatting templates"
+      ]
     },
     {
-      title: "Delivers fact-based evidence with citations",
-      subtitle: "Transparent research that builds funder confidence",
-      description: "Every recommendation comes with verifiable sources, impact data, and research citations. Our AI provides transparent methodology and evidence-based rationale that program officers can trust and verify.",
-      insight: {
-        label: "Research Quality",
-        quote: "Proposals with properly cited, peer-reviewed evidence have 3x higher funding success rates. Yet most organizations lack research capacity to find and verify credible sources for their applications.",
-        source: "Grantmaking Effectiveness Study, 2024",
-        stat: "3x higher success"
-      },
-      mockup: (
-        <div className="w-full h-[700px] bg-white rounded-xl shadow-2xl overflow-hidden border border-slate-200">
-          {/* Professional header */}
-          <div className="bg-slate-50 border-b border-slate-200 px-6 py-3 flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="w-6 h-6 bg-indigo-500 rounded-md flex items-center justify-center">
-                <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-              </div>
-              <span className="text-sm font-medium text-slate-700">Evidence Library</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-              <span className="text-xs text-slate-500">12 Sources Verified</span>
-            </div>
-          </div>
-          
-          <div className="p-6 space-y-4">
-            {/* Research Quality Score */}
-            <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-lg p-4 border border-indigo-200">
-              <div className="flex items-center justify-between">
-                <div>
-                  <div className="text-lg font-bold text-slate-900">Research Quality Score</div>
-                  <div className="text-sm text-slate-600">Based on source credibility and recency</div>
-                </div>
-                <div className="text-right">
-                  <div className="text-3xl font-bold text-indigo-600">94</div>
-                  <div className="text-xs text-slate-500">/ 100</div>
-                </div>
-              </div>
-            </div>
-
-            {/* Evidence Cards */}
-            <div className="space-y-3">
-              {/* First Evidence */}
-              <div className="border border-slate-200 rounded-lg p-4">
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-emerald-500 rounded-lg flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
-                    87%
-                  </div>
-                  <div className="flex-1">
-                    <div className="font-semibold text-slate-900 text-sm mb-1">
-                      Students in quality STEM programs 87% more likely to pursue STEM careers
-                    </div>
-                    <div className="text-xs text-slate-600 mb-2">
-                      Supports hands-on learning and mentorship components
-                    </div>
-                    <div className="flex items-center gap-2 text-xs">
-                      <span className="bg-emerald-100 text-emerald-800 px-2 py-1 rounded font-medium">NSF 2024</span>
-                      <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded">Peer Reviewed</span>
-                      <span className="text-slate-500">15,247 students</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Second Evidence */}
-              <div className="border border-slate-200 rounded-lg p-4">
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
-                    32%
-                  </div>
-                  <div className="flex-1">
-                    <div className="font-semibold text-slate-900 text-sm mb-1">
-                      Youth mentorship increases graduation rates by 32%
-                    </div>
-                    <div className="text-xs text-slate-600 mb-2">
-                      Strong evidence for industry mentorship impact
-                    </div>
-                    <div className="flex items-center gap-2 text-xs">
-                      <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded font-medium">Rhodes et al. 2023</span>
-                      <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded">Meta-Analysis</span>
-                      <span className="text-slate-500">Impact Factor: 4.7</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Third Evidence */}
-              <div className="border border-slate-200 rounded-lg p-4">
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-violet-500 rounded-lg flex items-center justify-center text-white font-bold text-xs flex-shrink-0">
-                    2.8x
-                  </div>
-                  <div className="flex-1">
-                    <div className="font-semibold text-slate-900 text-sm mb-1">
-                      Every $1 invested generates $2.80 economic return
-                    </div>
-                    <div className="text-xs text-slate-600 mb-2">
-                      ROI justification for program investment
-                    </div>
-                    <div className="flex items-center gap-2 text-xs">
-                      <span className="bg-violet-100 text-violet-800 px-2 py-1 rounded font-medium">Brookings 2024</span>
-                      <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded">Policy Research</span>
-                      <span className="text-slate-500">15-year study</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Source Analysis */}
-            <div className="grid grid-cols-3 gap-4">
-              <div className="text-center p-3 bg-slate-50 rounded-lg border border-slate-200">
-                <div className="text-2xl font-bold text-slate-900">94%</div>
-                <div className="text-xs text-slate-500 mt-1">Peer-reviewed</div>
-              </div>
-              <div className="text-center p-3 bg-slate-50 rounded-lg border border-slate-200">
-                <div className="text-2xl font-bold text-slate-900">87%</div>
-                <div className="text-xs text-slate-500 mt-1">Recent (3 years)</div>
-              </div>
-              <div className="text-center p-3 bg-slate-50 rounded-lg border border-slate-200">
-                <div className="text-2xl font-bold text-slate-900">12</div>
-                <div className="text-xs text-slate-500 mt-1">Total Sources</div>
-              </div>
-            </div>
-
-            {/* Source Verification */}
-            <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
-              <div className="flex items-center justify-between">
-                <div className="text-sm font-semibold text-slate-900">Source Verification Status</div>
-                <div className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  <span className="text-sm text-green-600 font-medium">All sources verified</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )
+      id: 4,
+      title: "Professional Logic Model Builder",
+      subtitle: "Visual theory of change diagrams funders love",
+      description: "Create publication-ready logic models that clearly demonstrate your program's impact pathway. AI suggests improvements based on evaluation best practices and funder preferences.",
+      icon: Brain,
+      image: "/feature_images/Logic Model.png",
+      color: "indigo",
+      gradient: "from-indigo-600 to-purple-600",
+      stats: "Professional diagrams",
+      benefits: [
+        "Drag-and-drop logic modeling",
+        "AI impact pathway suggestions",
+        "Printable PDF generation", 
+        "Theory of change validation"
+      ]
+    },
+    {
+      id: 5,
+      title: "Smart Budget & KPI Tracking",
+      subtitle: "Financial management that impresses funders",
+      description: "Build compliant budgets and track performance metrics with real-time variance analysis. Generate reports that demonstrate fiscal responsibility and program effectiveness.",
+      icon: Calculator,
+      image: "/feature_images/Expense and KPI Grid.png",
+      color: "orange",
+      gradient: "from-orange-600 to-red-600",
+      stats: "100% compliance",
+      benefits: [
+        "Automated budget calculations",
+        "Real-time expense tracking",
+        "Variance analysis reporting",
+        "KPI performance dashboards"
+      ]
+    },
+    {
+      id: 6,
+      title: "Collaborative Team Workspace",
+      subtitle: "Real-time collaboration with your entire team",
+      description: "Work together seamlessly with built-in commenting, document sharing, and activity feeds. Keep everyone aligned on proposal development and deadlines with powerful team features.",
+      icon: Users,
+      image: "/feature_images/Collaboration.png",
+      color: "purple",
+      gradient: "from-purple-600 to-violet-600",
+      stats: "Real-time sync",
+      benefits: [
+        "Live document collaboration",
+        "Team activity notifications",
+        "Comment and review workflows",
+        "Deadline tracking for teams"
+      ]
     }
   ];
 
+  useEffect(() => {
+    if (!isAutoPlay) return;
+    
+    const interval = setInterval(() => {
+      setActiveFeature((prev) => (prev + 1) % features.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [isAutoPlay, features.length]);
+
+  const toggleAutoPlay = () => setIsAutoPlay(!isAutoPlay);
+
+  const getColorClasses = (color: string) => {
+    const colors = {
+      blue: {
+        bg: "bg-blue-50",
+        border: "border-blue-200",
+        text: "text-blue-700",
+        icon: "bg-blue-100 text-blue-600",
+        button: "bg-blue-600 hover:bg-blue-700",
+        tab: "bg-blue-600 text-white",
+        tabHover: "hover:bg-blue-100 hover:text-blue-700"
+      },
+      green: {
+        bg: "bg-green-50",
+        border: "border-green-200", 
+        text: "text-green-700",
+        icon: "bg-green-100 text-green-600",
+        button: "bg-green-600 hover:bg-green-700",
+        tab: "bg-green-600 text-white",
+        tabHover: "hover:bg-green-100 hover:text-green-700"
+      },
+      purple: {
+        bg: "bg-purple-50",
+        border: "border-purple-200",
+        text: "text-purple-700",
+        icon: "bg-purple-100 text-purple-600", 
+        button: "bg-purple-600 hover:bg-purple-700",
+        tab: "bg-purple-600 text-white",
+        tabHover: "hover:bg-purple-100 hover:text-purple-700"
+      },
+      indigo: {
+        bg: "bg-indigo-50",
+        border: "border-indigo-200",
+        text: "text-indigo-700",
+        icon: "bg-indigo-100 text-indigo-600", 
+        button: "bg-indigo-600 hover:bg-indigo-700",
+        tab: "bg-indigo-600 text-white",
+        tabHover: "hover:bg-indigo-100 hover:text-indigo-700"
+      },
+      orange: {
+        bg: "bg-orange-50",
+        border: "border-orange-200",
+        text: "text-orange-700", 
+        icon: "bg-orange-100 text-orange-600",
+        button: "bg-orange-600 hover:bg-orange-700",
+        tab: "bg-orange-600 text-white",
+        tabHover: "hover:bg-orange-100 hover:text-orange-700"
+      },
+      teal: {
+        bg: "bg-teal-50",
+        border: "border-teal-200",
+        text: "text-teal-700", 
+        icon: "bg-teal-100 text-teal-600",
+        button: "bg-teal-600 hover:bg-teal-700",
+        tab: "bg-teal-600 text-white",
+        tabHover: "hover:bg-teal-100 hover:text-teal-700"
+      }
+    };
+    return colors[color as keyof typeof colors];
+  };
+
+  const currentFeature = features[activeFeature];
+  const colors = getColorClasses(currentFeature.color);
+
   return (
-    <div id="why-fundsprout" className="bg-white py-12 sm:py-20">
+    <section id="features" className="py-20 lg:py-32 bg-gradient-to-b from-white to-wise-background-neutral/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-10 sm:mb-16">
-          <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
-            Fundsprout is AI purpose-built for
-            <br className="hidden sm:block" />
-            <span className="block sm:inline text-transparent bg-clip-text bg-gradient-to-r from-wise-bright-green to-wise-forest-green italic">professional grant writing</span>
+        
+        {/* Section Header */}
+        <div className="text-center mb-16 lg:mb-20">
+          <div className="inline-flex items-center gap-2 bg-wise-forest-green/10 text-wise-forest-green px-4 py-2 rounded-full text-sm font-medium mb-8">
+            <Brain className="w-4 h-4" />
+            Fundsprout is AI purpose-built for grant writing
+          </div>
+          
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 tracking-tight">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-wise-bright-green to-wise-forest-green">
+              Everything You Need to Win Grants
+            </span>
           </h2>
-          <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto">
-            Trained on thousands of winning proposals, our AI delivers funder-ready documents, not just suggestions.
+          
+          <p className="text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            From AI writing assistance to budget tracking, our platform handles every aspect of successful grant applications.
           </p>
         </div>
 
-        <div className="space-y-12 lg:space-y-24">
-          {features.map((feature, index) => (
-            <div key={index} className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center">
-              <div className={`space-y-4 sm:space-y-6 ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
-                <div>
-                  <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
-                        {feature.title}
-                      </h3>
-                  <p className="text-lg sm:text-xl text-transparent bg-clip-text bg-gradient-to-r from-wise-bright-green to-wise-forest-green font-medium mb-6">
-                    {feature.subtitle}
-                  </p>
-                      <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
-                        {feature.description}
-                      </p>
-                    </div>
+        {/* Feature Demo Section */}
+        <div className="bg-gray-50 rounded-3xl p-8 lg:p-12">
+          
+          {/* Header with Auto-play Control */}
+          <div className="flex items-center justify-between mb-8">
+            <div>
+              <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-2">
+                Built by Grant Writers, For Grant Writers
+              </h3>
+              <p className="text-gray-600">
+                Not generic AI — purpose-built on winning proposals and funder expertise
+              </p>
+            </div>
+            <button
+              onClick={toggleAutoPlay}
+              className="flex items-center gap-2 px-4 py-2 bg-white hover:bg-gray-50 rounded-lg transition-colors shadow-sm border border-gray-200"
+            >
+              {isAutoPlay ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
+              <span className="text-sm font-medium">{isAutoPlay ? 'Pause' : 'Play'} Tour</span>
+            </button>
+          </div>
 
-                <div className="bg-gray-50 p-4 sm:p-6 rounded-xl border">
-                  <div className="flex items-center gap-2 mb-3">
-                    <div className="w-2 h-2 bg-wise-forest-green rounded-full"></div>
-                    <span className="text-sm font-semibold text-gray-700 uppercase tracking-wide">{feature.insight.label}</span>
-                  </div>
-                  <div className="text-lg text-gray-800 mb-4 leading-relaxed">
-                    {feature.insight.quote}
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <div className="text-sm text-gray-600">
-                      {feature.insight.source}
-                    </div>
-                    <div className="text-sm font-bold text-wise-forest-green">
-                      {feature.insight.stat}
-                    </div>
-                  </div>
-                </div>
+          {/* Horizontal Tab Navigation */}
+          <div className="mb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+              {features.map((feature, index) => {
+                const isActive = index === activeFeature;
+                const featureColors = getColorClasses(feature.color);
+                const Icon = feature.icon;
+                
+                return (
+                  <button
+                    key={feature.id}
+                    onClick={() => setActiveFeature(index)}
+                    className={`flex items-center gap-2 px-4 py-3 rounded-xl font-medium transition-all duration-300 ${
+                      isActive 
+                        ? `${featureColors.tab} shadow-lg scale-105` 
+                        : `bg-white text-gray-600 ${featureColors.tabHover} border border-gray-200`
+                    }`}
+                  >
+                    <Icon className="w-4 h-4" />
+                    <span className="text-sm whitespace-nowrap">{feature.title}</span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Two-Column Content Area */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 bg-white rounded-2xl p-8 shadow-sm">
+            
+            {/* Left: Feature Content */}
+            <div className="space-y-6">
+              <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-medium ${colors.bg} ${colors.text}`}>
+                <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${currentFeature.gradient}`}></div>
+                Feature {currentFeature.id}
+              </div>
+
+              <div>
+                <h4 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-3">
+                  {currentFeature.title}
+                </h4>
+                
+                <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                  {currentFeature.description}
+                </p>
               </div>
               
-              <div className={`${index % 2 === 1 ? 'lg:order-1' : ''}`}>
-                {feature.mockup}
+              <div>
+                <h5 className="font-semibold text-gray-900 mb-4">Key Features:</h5>
+                <div className="space-y-3">
+                  {currentFeature.benefits.map((benefit, idx) => (
+                    <div key={idx} className="flex items-center gap-3">
+                      <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${currentFeature.gradient}`}></div>
+                      <span className="text-gray-700">{benefit}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+
+            </div>
+            
+            {/* Right: Feature Screenshot */}
+            <div className="relative">
+              {/* Screenshot Container */}
+              <div className="relative bg-white rounded-xl shadow-xl border border-gray-200 overflow-hidden">
+                <div className="relative h-[400px] lg:h-[450px]">
+                  {features.map((feature, index) => (
+                    <div
+                      key={feature.id}
+                      className={`absolute inset-0 transition-all duration-500 ease-out ${
+                        index === activeFeature 
+                          ? 'opacity-100 transform scale-100' 
+                          : 'opacity-0 transform scale-95'
+                      }`}
+                    >
+                      <img
+                        src={feature.image}
+                        alt={`${feature.title} interface`}
+                        className="w-full h-full object-contain object-center"
+                        loading="lazy"
+                      />
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
-          ))}
+          </div>
+        </div>
+
+        {/* Bottom Testimonial */}
+        <div className="mt-32 text-center">
+          <div className="max-w-4xl mx-auto">
+            <blockquote className="text-2xl lg:text-3xl font-medium text-gray-900 mb-8 leading-relaxed">
+              "It's uncanny how well Fundsprout knows our organization. The AI understands our programs better than most board members and identifies opportunities that perfectly match our mission."
+            </blockquote>
+            <div className="flex items-center justify-center gap-4">
+              <div className="w-12 h-12 bg-wise-forest-green rounded-full flex items-center justify-center text-white font-bold">
+                AA
+              </div>
+              <div className="text-left">
+                <div className="font-semibold text-gray-900">Ahmed Ali</div>
+                <div className="text-gray-600">Executive Director, Injaz Toronto</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
 export default StickyScrollFeatures;
-

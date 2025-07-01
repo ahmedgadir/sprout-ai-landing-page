@@ -83,14 +83,14 @@ const UnificationSection = () => {
                     </li>
                   ))}
                 </ul>
-              </div>
             </div>
-
+          </div>
+          
             {/* Transformation Arrow */}
             <div className="flex justify-center lg:absolute lg:left-1/2 lg:top-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 lg:z-10 order-2 lg:order-none">
                           <div className="bg-white rounded-full p-2 shadow-lg border-2 border-wise-bright-green lg:rotate-0 rotate-90">
               <ArrowRight className="w-4 h-4 text-wise-bright-green" />
-              </div>
+                </div>
             </div>
 
             {/* After: FundSprout Solution */}
@@ -102,7 +102,7 @@ const UnificationSection = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Unified Platform</h3>
                 <p className="text-gray-600 mb-6">All tools integrated seamlessly in one place</p>
-              </div>
+            </div>
 
               {/* Unified Platform */}
               <div className="bg-wise-forest-green rounded-xl p-6 text-white shadow-lg flex-grow flex flex-col justify-center">
@@ -130,7 +130,7 @@ const UnificationSection = () => {
                   <div className="bg-white/10 rounded-lg p-3 text-center">
                     <Users className="w-4 h-4 mx-auto mb-1" />
                     <span className="text-xs font-medium">Collaboration</span>
-                  </div>
+            </div>
                 </div>
               </div>
 
@@ -145,7 +145,7 @@ const UnificationSection = () => {
                     </li>
                   ))}
                 </ul>
-              </div>
+                </div>
             </div>
           </div>
         </div>

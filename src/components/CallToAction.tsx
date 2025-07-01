@@ -79,10 +79,15 @@ const CallToAction = () => {
               </div>
             </div>
             
-            <button className="w-full bg-wise-forest-green hover:bg-wise-bright-green text-white hover:text-wise-forest-green px-8 py-4 rounded-xl font-semibold text-lg transition-all flex items-center justify-center gap-3 group shadow-lg hover:shadow-xl">
+            <a
+              href="https://calendly.com/abdulgadir-fundsprout/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full bg-wise-forest-green hover:bg-wise-bright-green text-white hover:text-wise-forest-green px-8 py-4 rounded-xl font-semibold text-lg transition-all flex items-center justify-center gap-3 group shadow-lg hover:shadow-xl"
+            >
               Schedule Your Demo
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
+            </a>
             
             <p className="text-center text-sm text-gray-500 mt-4">
               No commitment required • Available within 24 hours
