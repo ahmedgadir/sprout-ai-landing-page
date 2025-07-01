@@ -234,10 +234,7 @@ const AppShowcase = () => {
                       {feature.stats}
                     </div>
                     
-                    {/* Active indicator */}
-                    {isActive && (
-                      <div className={`absolute -top-1 -right-1 w-4 h-4 bg-gradient-to-r ${feature.gradient} rounded-full border-2 border-white`}></div>
-                    )}
+                    
                   </button>
                 );
               })}
@@ -309,16 +306,7 @@ const AppShowcase = () => {
                               loading="lazy"
                             />
                             
-                            {/* Overlay gradient */}
-                            <div className={`absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent`}></div>
                             
-                            {/* Feature badge */}
-                            <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-sm rounded-xl p-3 shadow-lg">
-                              <div className="flex items-center gap-2">
-                                <div className={`w-3 h-3 rounded-full bg-gradient-to-r ${feature.gradient}`}></div>
-                                <span className="text-sm font-semibold text-gray-800">{feature.title}</span>
-                              </div>
-                            </div>
                           </div>
                         ))}
                       </div>
