@@ -1,3 +1,11 @@
+User-agent: *
+Allow: /
+
+# Block access to admin or sensitive areas if they exist
+# Disallow: /admin/
+# Disallow: /api/
+
+# Allow specific crawlers
 User-agent: Googlebot
 Allow: /
 
@@ -10,5 +18,5 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-User-agent: *
-Allow: /
+# Sitemap location
+Sitemap: https://fundsprout.ai/sitemap.xml

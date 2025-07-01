@@ -277,7 +277,7 @@ const StickyScrollFeatures = () => {
               </div>
               
               <div>
-                <h5 className="font-semibold text-gray-900 mb-4">Key Features:</h5>
+                <h4 className="font-semibold text-gray-900 mb-4">Key Features:</h4>
                 <div className="space-y-3">
                   {currentFeature.benefits.map((benefit, idx) => (
                     <div key={idx} className="flex items-center gap-3">
