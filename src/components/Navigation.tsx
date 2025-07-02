@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import Logo from './Logo';
 import { Button } from '@/components/ui/button';
@@ -24,8 +25,11 @@ const Navigation = () => {
             <a href="#demo" className="text-gray-700 hover:text-wise-forest-green transition-colors font-medium">
               Features
             </a>
-            <a href="#" className="text-gray-700 hover:text-wise-forest-green transition-colors font-medium">
-              About
+            <a href="#features" className="text-gray-700 hover:text-wise-forest-green transition-colors font-medium">
+              Why Fundsprout
+            </a>
+            <a href="#fundsprout-solution" className="text-gray-700 hover:text-wise-forest-green transition-colors font-medium">
+              The Fundsprout Solution
             </a>
           </div>
 
@@ -39,15 +43,12 @@ const Navigation = () => {
             >
               Login
             </a>
-            <a
-              href="https://calendly.com/abdulgadir-fundsprout/30min"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Button 
+              className="bg-wise-forest-green hover:bg-wise-bright-green text-white hover:text-wise-forest-green font-medium px-6 py-2 transition-all duration-200 hover:scale-105"
+              onClick={() => handleNavClick('request-demo')}
             >
-              <Button className="bg-wise-forest-green hover:bg-wise-bright-green text-white hover:text-wise-forest-green font-medium px-6 py-2 transition-all duration-200 hover:scale-105">
-                Request Demo
-              </Button>
-            </a>
+              Request Demo
+          </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -71,33 +72,34 @@ const Navigation = () => {
                 Features
               </a>
               <a
-                href="#"
+                href="#features"
                 className="block px-3 py-2 text-gray-700 hover:text-wise-forest-green font-medium"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={() => handleNavClick('features')}
               >
-                About
+                Why Fundsprout
+              </a>
+              <a
+                href="#fundsprout-solution"
+                className="block px-3 py-2 text-gray-700 hover:text-wise-forest-green font-medium"
+                onClick={() => handleNavClick('fundsprout-solution')}
+              >
+                The Fundsprout Solution
               </a>
               <a
                 href="https://app.fundsprout.ai"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block px-3 py-2 text-gray-700 hover:text-wise-forest-green font-medium"
-                onClick={() => setIsMenuOpen(false)}
               >
                 Login
               </a>
               <div className="pt-2">
-                <a
-                  href="https://calendly.com/abdulgadir-fundsprout/30min"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block w-full"
-                  onClick={() => setIsMenuOpen(false)}
+                <Button 
+                  className="w-full bg-wise-forest-green hover:bg-wise-bright-green text-white hover:text-wise-forest-green font-medium py-2"
+                  onClick={() => handleNavClick('request-demo')}
                 >
-                  <Button className="w-full bg-wise-forest-green hover:bg-wise-bright-green text-white hover:text-wise-forest-green font-medium py-2">
-                    Request Demo
-                  </Button>
-                </a>
+                  Request Demo
+                </Button>
               </div>
             </div>
           </div>
