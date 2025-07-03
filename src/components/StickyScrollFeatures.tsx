@@ -47,7 +47,7 @@ const StickyScrollFeatures = () => {
       subtitle: "Professional grant writing that impresses funders",
       description: "Transform your ideas into compelling, funder-ready narratives. Our AI helps craft persuasive proposals with proper structure, tone, and language that resonates with grant reviewers.",
       icon: PenTool,
-      image: "/feature_images/ai-enhanced-writing.png?v=2",
+      image: "/feature_images/ai-enhanced-writing.png",
       color: "blue",
       gradient: "from-blue-600 to-indigo-600",
       stats: "98% approval rate",
@@ -64,7 +64,7 @@ const StickyScrollFeatures = () => {
       subtitle: "Visual theory of change diagrams funders love",
       description: "Create publication-ready logic models that clearly demonstrate your program's impact pathway. AI suggests improvements based on evaluation best practices and funder preferences.",
       icon: Brain,
-      image: "/feature_images/logic-model.png?v=2",
+      image: "/feature_images/logic-model.png",
       color: "indigo",
       gradient: "from-indigo-600 to-purple-600",
       stats: "Professional diagrams",
@@ -81,7 +81,7 @@ const StickyScrollFeatures = () => {
       subtitle: "Financial management that impresses funders",
       description: "Build compliant budgets and track performance metrics with real-time variance analysis. Generate reports that demonstrate fiscal responsibility and program effectiveness.",
       icon: Calculator,
-      image: "/feature_images/expense-and-kpi-grid.png?v=2",
+      image: "/feature_images/expense-and-kpi-grid.png",
       color: "orange",
       gradient: "from-orange-600 to-red-600",
       stats: "100% compliance",
@@ -206,8 +206,8 @@ const StickyScrollFeatures = () => {
           <p className="text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
             From AI writing assistance to budget tracking, our platform handles every aspect of successful grant applications.
           </p>
-        </div>
-
+              </div>
+              
         {/* Feature Demo Section */}
         <div className="bg-gray-50 rounded-3xl p-8 lg:p-12">
           
@@ -229,7 +229,7 @@ const StickyScrollFeatures = () => {
               <span className="text-sm font-medium">{isAutoPlay ? 'Pause' : 'Play'} Tour</span>
             </button>
           </div>
-
+          
           {/* Horizontal Tab Navigation */}
           <div className="mb-8">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -255,7 +255,7 @@ const StickyScrollFeatures = () => {
               })}
             </div>
           </div>
-
+          
           {/* Two-Column Content Area */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 bg-white rounded-2xl p-8 shadow-sm">
             
@@ -275,7 +275,7 @@ const StickyScrollFeatures = () => {
                   {currentFeature.description}
                 </p>
               </div>
-              
+
               <div>
                 <h4 className="font-semibold text-gray-900 mb-4">Key Features:</h4>
                 <div className="space-y-3">
@@ -283,14 +283,14 @@ const StickyScrollFeatures = () => {
                     <div key={idx} className="flex items-center gap-3">
                       <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${currentFeature.gradient}`}></div>
                       <span className="text-gray-700">{benefit}</span>
-                    </div>
+                </div>
                   ))}
                 </div>
               </div>
 
 
             </div>
-            
+
             {/* Right: Feature Screenshot */}
             <div className="relative">
               {/* Screenshot Container */}
@@ -316,9 +316,9 @@ const StickyScrollFeatures = () => {
                 </div>
               </div>
             </div>
+            </div>
           </div>
-        </div>
-
+          
         {/* Bottom Testimonial */}
         <div className="mt-32 text-center">
           <div className="max-w-4xl mx-auto">

@@ -148,7 +148,7 @@ const AppShowcase = () => {
             
             <p className="text-base sm:text-lg lg:text-xl xl:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               Watch how Fundsprout transforms the entire grant lifecycle—from finding opportunities to submitting winning proposals to staying compliant.
-            </p>
+                </p>
           </div>
 
           {/* Stats Section - Mobile Optimized */}
@@ -196,7 +196,7 @@ const AppShowcase = () => {
                 </div>
               </div>
             </div>
-
+            
             {/* Feature Navigation - Mobile Optimized */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-8 sm:mb-12">
               {features.map((feature, index) => {
@@ -218,8 +218,8 @@ const AppShowcase = () => {
                       isActive ? colors.icon : 'bg-gray-100 text-gray-600'
                     }`}>
                       <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
-                    </div>
-                    
+                </div>
+                
                     <h4 className={`font-bold text-sm sm:text-base lg:text-lg mb-2 ${isActive ? colors.text : 'text-gray-900'} leading-tight`}>
                       {feature.title}
                     </h4>
@@ -258,7 +258,7 @@ const AppShowcase = () => {
                         <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6 ${colors.bg} ${colors.text}`}>
                           <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${feature.gradient}`}></div>
                           Step {feature.id}
-                        </div>
+                </div>
                 
                         <h3 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 leading-tight">
                           {feature.title}
@@ -267,21 +267,21 @@ const AppShowcase = () => {
                         <p className="text-sm sm:text-base lg:text-lg text-gray-600 mb-6 sm:mb-8 leading-relaxed">
                           {feature.description}
                         </p>
-                        
+              
                         <div className="space-y-3 sm:space-y-4">
                           <h4 className="font-semibold text-gray-900 mb-3 sm:mb-4 text-sm sm:text-base">Key Features:</h4>
                           {feature.benefits.map((benefit, idx) => (
                             <div key={idx} className="flex items-start gap-3">
                               <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${feature.gradient} flex-shrink-0 mt-2`}></div>
                               <span className="text-xs sm:text-sm lg:text-base text-gray-700 leading-relaxed">{benefit}</span>
-                            </div>
+                </div>
                           ))}
-                        </div>
+            </div>
                       </div>
                     );
                   })}
                 </div>
-                
+
                 {/* Screenshot Display - Mobile Optimized */}
                 <div className="lg:col-span-3">
                   <div className="relative">
@@ -303,10 +303,10 @@ const AppShowcase = () => {
                               className="w-full h-full object-cover object-top"
                               loading="lazy"
                             />
-                          </div>
-                        ))}
                       </div>
-                    </div>
+                        ))}
+                  </div>
+                </div>
 
                     {/* Progress indicator - Mobile Optimized */}
                     <div className="flex justify-center mt-4 sm:mt-6">
@@ -326,8 +326,8 @@ const AppShowcase = () => {
                 </div>
               </div>
             </div>
-          </div>
-
+              </div>
+              
           {/* Bottom CTA Section - Mobile Optimized */}
           <div className="text-center">
             <div className="bg-gradient-to-br from-wise-forest-green to-wise-bright-green rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12 text-white">
@@ -337,7 +337,7 @@ const AppShowcase = () => {
               <p className="text-sm sm:text-base lg:text-xl text-white/90 mb-6 sm:mb-8 leading-relaxed max-w-2xl mx-auto">
                 Join organizations transforming grant success with Fundsprout.
               </p>
-              <div className="text-center">
+          <div className="text-center">
                 <a 
                   href="https://calendly.com/abdulgadir-fundsprout/30min"
                   target="_blank"
