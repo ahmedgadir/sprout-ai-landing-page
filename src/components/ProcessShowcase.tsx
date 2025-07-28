@@ -1,26 +1,26 @@
 import React, { useState } from 'react';
-import { Search, FileText, CheckCircle, ArrowRight, Play, Pause } from 'lucide-react';
-import grantDiscoveryMockup from '@/assets/grant-discovery-mockup.jpg';
-import grantApplicationMockup from '@/assets/grant-application-mockup.jpg';
+import { Search, Target, Brain, Database, Play, Pause } from 'lucide-react';
+import grantDiscoveryDashboard from '@/assets/grant-discovery-dashboard.jpg';
 
 const ProcessShowcase = () => {
   const [activeStep, setActiveStep] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
 
-  const steps = [
+  const features = [
     {
-      title: "Intelligent Grant Discovery",
-      subtitle: "AI scours thousands of data points",
-      description: "Our AI scans thousands of grants across the web, while our team verifies data completeness and our proprietary matching system finds grants perfectly suited to your organizational profile",
-      mockup: grantDiscoveryMockup,
-      stats: "10,000+ grants analyzed daily"
+      icon: Database,
+      title: "Comprehensive Scanning",
+      description: "AI analyzes 10,000+ grants daily from federal, state, and foundation sources"
     },
     {
-      title: "AI-Powered Application Writing",
-      subtitle: "Compelling proposals from your data",
-      description: "Using only information you provide, we research compelling statistics, analyze similar winners, and extract key RFP requirements so you never have to review complex documents",
-      mockup: grantApplicationMockup,
-      stats: "3x higher success rate"
+      icon: Brain,
+      title: "Intelligent Matching",
+      description: "Proprietary algorithms match grants to your organization's profile and mission"
+    },
+    {
+      icon: Target,
+      title: "High-Fit Identification",
+      description: "Only grants with 85%+ compatibility scores make it to your dashboard"
     }
   ];
 
@@ -28,11 +28,11 @@ const ProcessShowcase = () => {
     if (!isPlaying) return;
     
     const interval = setInterval(() => {
-      setActiveStep((prev) => (prev + 1) % steps.length);
-    }, 4000);
+      setActiveStep((prev) => (prev + 1) % features.length);
+    }, 3000);
     
     return () => clearInterval(interval);
-  }, [isPlaying, steps.length]);
+  }, [isPlaying, features.length]);
 
   const togglePlayback = () => {
     setIsPlaying(!isPlaying);
@@ -43,10 +43,10 @@ const ProcessShowcase = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            See How It Works
+            Intelligent Grant Discovery
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
-            From discovery to submission, watch our AI-powered platform transform your grant process.
+            Watch our AI scan thousands of grants to find the perfect matches for your organization.
           </p>
           
           {/* Playback Control */}
@@ -60,9 +60,9 @@ const ProcessShowcase = () => {
             </button>
           </div>
 
-          {/* Step Indicators */}
+          {/* Feature Indicators */}
           <div className="flex justify-center space-x-4 mb-12">
-            {steps.map((_, index) => (
+            {features.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setActiveStep(index)}
@@ -80,24 +80,26 @@ const ProcessShowcase = () => {
             {/* Content Side */}
             <div className="space-y-6">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
-                {activeStep === 0 && <Search className="w-8 h-8 text-blue-600" />}
-                {activeStep === 1 && <FileText className="w-8 h-8 text-blue-600" />}
-                {activeStep === 2 && <CheckCircle className="w-8 h-8 text-blue-600" />}
+                {React.createElement(features[activeStep].icon, { className: "w-8 h-8 text-blue-600" })}
               </div>
               
               <div>
                 <h3 className="text-3xl font-bold text-gray-900 mb-2">
-                  {steps[activeStep].title}
+                  {features[activeStep].title}
                 </h3>
-                <p className="text-xl text-blue-600 font-semibold mb-4">
-                  {steps[activeStep].subtitle}
-                </p>
                 <p className="text-lg text-gray-600 mb-6">
-                  {steps[activeStep].description}
+                  {features[activeStep].description}
                 </p>
-                <div className="bg-white rounded-lg p-4 shadow-sm border border-blue-100">
-                  <div className="text-2xl font-bold text-blue-600 mb-1">
-                    {steps[activeStep].stats}
+                
+                {/* Process Stats */}
+                <div className="grid grid-cols-2 gap-4 mt-8">
+                  <div className="bg-white rounded-lg p-4 shadow-sm border border-blue-100">
+                    <div className="text-2xl font-bold text-blue-600">10K+</div>
+                    <div className="text-sm text-gray-600">Grants Scanned Daily</div>
+                  </div>
+                  <div className="bg-white rounded-lg p-4 shadow-sm border border-green-100">
+                    <div className="text-2xl font-bold text-green-600">85%+</div>
+                    <div className="text-sm text-gray-600">Match Accuracy</div>
                   </div>
                 </div>
               </div>
@@ -115,9 +117,9 @@ const ProcessShowcase = () => {
                 </div>
                 <div className="aspect-video bg-gradient-to-br from-blue-50 to-purple-50 p-8">
                   <img
-                    src={steps[activeStep].mockup}
-                    alt={steps[activeStep].title}
-                    className="w-full h-full object-contain rounded-lg shadow-lg transition-all duration-500 hover:scale-105"
+                    src={grantDiscoveryDashboard}
+                    alt="AI Grant Discovery Dashboard"
+                    className="w-full h-full object-cover rounded-lg shadow-lg transition-all duration-500 hover:scale-105"
                   />
                 </div>
               </div>
@@ -137,7 +139,7 @@ const ProcessShowcase = () => {
 
           {/* Navigation */}
           <div className="flex justify-center mt-12 space-x-4">
-            {steps.map((step, index) => (
+            {features.map((feature, index) => (
               <button
                 key={index}
                 onClick={() => setActiveStep(index)}
@@ -147,7 +149,7 @@ const ProcessShowcase = () => {
                     : 'bg-white text-gray-600 hover:bg-blue-50 hover:text-blue-600'
                 }`}
               >
-                {step.title}
+                {feature.title}
               </button>
             ))}
           </div>
