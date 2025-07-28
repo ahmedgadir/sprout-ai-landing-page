@@ -63,8 +63,8 @@ const CallToAction = () => {
                   <CheckCircle className="w-4 h-4 text-green-600" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-1">Custom Setup</h4>
-                  <p className="text-sm text-gray-600">Tailored configuration for your organization</p>
+                  <h4 className="font-semibold text-gray-900 mb-1">Live Grant Writer Review</h4>
+                  <p className="text-sm text-gray-600">Expert review of your AI-drafted proposals</p>
                 </div>
               </div>
               
