@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Search, Target, Brain, Database, Play, Pause } from 'lucide-react';
-import grantDiscoveryDashboard from '@/assets/grant-discovery-dashboard.jpg';
+import grantDataPipeline from '@/assets/grant-data-pipeline.jpg';
 
 const ProcessShowcase = () => {
   const [activeStep, setActiveStep] = useState(0);
@@ -117,8 +117,8 @@ const ProcessShowcase = () => {
                 </div>
                 <div className="aspect-video bg-gradient-to-br from-blue-50 to-purple-50 p-8">
                   <img
-                    src={grantDiscoveryDashboard}
-                    alt="AI Grant Discovery Dashboard"
+                    src={grantDataPipeline}
+                    alt="Grant Data Pipeline and AI Processing"
                     className="w-full h-full object-cover rounded-lg shadow-lg transition-all duration-500 hover:scale-105"
                   />
                 </div>
