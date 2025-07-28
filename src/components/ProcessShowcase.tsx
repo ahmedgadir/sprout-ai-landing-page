@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Search, FileText, CheckCircle, ArrowRight, Play, Pause } from 'lucide-react';
+import grantDiscoveryMockup from '@/assets/grant-discovery-mockup.jpg';
+import grantApplicationMockup from '@/assets/grant-application-mockup.jpg';
 
 const ProcessShowcase = () => {
   const [activeStep, setActiveStep] = useState(0);
@@ -7,25 +9,18 @@ const ProcessShowcase = () => {
 
   const steps = [
     {
-      title: "Grant Discovery",
-      subtitle: "AI finds perfect matches",
-      description: "Our AI scans thousands of grants and matches them to your organization",
-      mockup: "/lovable-uploads/DiscoverGrants.png",
+      title: "Intelligent Grant Discovery",
+      subtitle: "AI scours thousands of data points",
+      description: "Our AI scans thousands of grants across the web, while our team verifies data completeness and our proprietary matching system finds grants perfectly suited to your organizational profile",
+      mockup: grantDiscoveryMockup,
       stats: "10,000+ grants analyzed daily"
     },
     {
-      title: "Smart Application",
-      subtitle: "AI writes winning proposals",
-      description: "Generate compelling grant applications using your data and proven strategies",
-      mockup: "/lovable-uploads/Writing.png",
+      title: "AI-Powered Application Writing",
+      subtitle: "Compelling proposals from your data",
+      description: "Using only information you provide, we research compelling statistics, analyze similar winners, and extract key RFP requirements so you never have to review complex documents",
+      mockup: grantApplicationMockup,
       stats: "3x higher success rate"
-    },
-    {
-      title: "Expert Review",
-      subtitle: "Human expertise meets AI",
-      description: "Live grant writers review and perfect your AI-generated applications",
-      mockup: "/lovable-uploads/Dashboard.png",
-      stats: "95% approval rating"
     }
   ];
 
