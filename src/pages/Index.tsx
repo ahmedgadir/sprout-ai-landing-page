@@ -3,7 +3,6 @@ import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
 import AppShowcase from '@/components/AppShowcase';
 import StickyScrollFeatures from '@/components/StickyScrollFeatures';
-import ProcessShowcase from '@/components/ProcessShowcase';
 import UnificationSection from '@/components/UnificationSection';
 import CallToAction from '@/components/CallToAction';
 
@@ -13,7 +12,6 @@ const Index = () => {
       <Navigation />
       <Hero />
       <AppShowcase />
-      <ProcessShowcase />
       <StickyScrollFeatures />
       <UnificationSection />
       <CallToAction />
