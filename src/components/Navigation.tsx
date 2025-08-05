@@ -38,14 +38,6 @@ const Navigation = () => {
 
           {/* Desktop CTA Buttons */}
           <div className="hidden md:flex items-center space-x-3">
-            <a
-              href="https://app.fundsprout.ai"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-700 hover:text-wise-forest-green transition-colors font-medium px-4 py-2 hover:bg-gray-50 rounded-md"
-            >
-              Login
-            </a>
             <Button 
               className="bg-wise-forest-green hover:bg-wise-bright-green text-white hover:text-wise-forest-green font-medium px-6 py-2 transition-all duration-200 hover:scale-105"
               onClick={() => handleNavClick('request-demo')}
@@ -94,14 +86,6 @@ const Navigation = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Blog
-              </a>
-              <a
-                href="https://app.fundsprout.ai"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block px-3 py-2 text-gray-700 hover:text-wise-forest-green font-medium"
-              >
-                Login
               </a>
               <div className="pt-2">
                 <Button 
