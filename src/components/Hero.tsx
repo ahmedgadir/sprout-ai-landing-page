@@ -19,7 +19,7 @@ const Hero = () => {
         
         <div className="flex flex-col gap-3 sm:flex-row sm:gap-4 justify-center items-center mb-6 sm:mb-8 animate-[scale-in_0.6s_ease-out] [animation-delay:1.8s] opacity-0 [animation-fill-mode:forwards] transform scale-95">
           <a 
-            href="https://calendly.com/abdulgadir-fundsprout/30min"
+            href="https://calendly.com/abdulgadir-fundsprout/fundsprout-demo"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center w-full sm:w-auto bg-wise-forest-green hover:bg-wise-bright-green text-white hover:text-wise-forest-green font-semibold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl group rounded-md"

@@ -339,7 +339,7 @@ const AppShowcase = () => {
               </p>
           <div className="text-center">
                 <a 
-                  href="https://calendly.com/abdulgadir-fundsprout/30min"
+                  href="https://calendly.com/abdulgadir-fundsprout/fundsprout-demo"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center bg-white text-wise-forest-green hover:bg-gray-100 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-lg sm:rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 w-full sm:w-auto max-w-sm sm:max-w-none mx-auto"

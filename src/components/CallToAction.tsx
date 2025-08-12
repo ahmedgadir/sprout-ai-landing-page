@@ -80,7 +80,7 @@ const CallToAction = () => {
             </div>
             
             <a
-              href="https://calendly.com/abdulgadir-fundsprout/30min"
+              href="https://calendly.com/abdulgadir-fundsprout/fundsprout-demo"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full bg-wise-forest-green hover:bg-wise-bright-green text-white hover:text-wise-forest-green px-8 py-4 rounded-xl font-semibold text-lg transition-all flex items-center justify-center gap-3 group shadow-lg hover:shadow-xl"
