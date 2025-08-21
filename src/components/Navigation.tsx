@@ -31,9 +31,6 @@ const Navigation = () => {
             <a href="#fundsprout-solution" className="text-gray-700 hover:text-wise-forest-green transition-colors font-medium">
               The Fundsprout Solution
             </a>
-            <a href="/blog" className="text-gray-700 hover:text-wise-forest-green transition-colors font-medium">
-              Blog
-            </a>
           </div>
 
           {/* Desktop CTA Buttons */}
@@ -79,13 +76,6 @@ const Navigation = () => {
                 onClick={() => handleNavClick('fundsprout-solution')}
               >
                 The Fundsprout Solution
-              </a>
-              <a
-                href="/blog"
-                className="block px-3 py-2 text-gray-700 hover:text-wise-forest-green font-medium"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Blog
               </a>
               <div className="pt-2">
                 <Button 
